@@ -107,7 +107,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .portfolio .project-img { height: 200px; }
 .project-img img[src$="quickwa-live.jpg"] { object-fit: contain; background: #f0f2f5; }
 .project-img img[src$="moil-live.jpg"], .project-img img[src$="portfolio-live.jpg"] { object-position: left top; }
-.project-detail-cover[src$="wedding-live.jpg"], .project-detail-cover[src$="moil-live.jpg"], .project-detail-cover[src$="portfolio-live.jpg"], .project-detail-cover[src$="lane-detection-v2.jpg"] { aspect-ratio: 16 / 9; object-fit: contain; }
+.project-detail-cover[src$="wedding-live.jpg"], .project-detail-cover[src$="moil-live.jpg"], .project-detail-cover[src$="portfolio-live.jpg"], .project-detail-cover[src$="lane-detection-v2.jpg"], .project-detail-cover[src$="replora.svg"] { aspect-ratio: 16 / 9; object-fit: contain; }
 .project-detail-cover[src$="quickwa-live.jpg"] { aspect-ratio: auto; height: min(480px, 55dvh); object-fit: contain; background: #f0f2f5; }
 
 /* Frame the original project captures without replacing their interface or copy. */
@@ -135,6 +135,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transform: translate(-50%, -50%) rotate(0deg) scale(1.04);
 }
 .project-preview[data-project-open="wedding"] .project-img { --cover-tint: rgb(113 51 58 / 72%); }
+.project-preview[data-project-open="replora"] .project-img { --cover-tint: rgb(15 139 125 / 75%); }
 .project-preview[data-project-open="moil"] .project-img { --cover-tint: rgb(42 70 110 / 78%); }
 .project-preview[data-project-open="restaurant"] .project-img { --cover-tint: rgb(113 68 43 / 76%); }
 .project-preview[data-project-open="quickwa"] .project-img { --cover-tint: rgb(35 115 77 / 78%); }
