@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ibrahim Zahid — Frontend Developer &amp; UI Designer</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+          },
+          colors: {
+            brand: {
+              gold: '#E5A93C',
+              goldLight: '#F3C669',
+              goldDark: '#B87B18',
+              charcoal: '#111215',
+              cardBg: '#18191E',
+              sidebar: '#0E0F12',
+              surface: '#1E2026',
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-decorations">
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0E0F12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #252830;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E5A93C;
+    }
+
+    /* Ambient glow for portrait */
+    .hero-glow {
+      background: radial-gradient(circle, rgba(229, 169, 60, 0.28) 0%, rgba(229, 169, 60, 0.06) 45%, transparent 70%);
+    }
+
+    /* Gold Monogram Gradient */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FAD980 0%, #E5A93C 50%, #A46F19 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Active Sidebar Nav Glow */
+    .nav-active-item {
+      background: linear-gradient(90deg, rgba(229, 169, 60, 0.16) 0%, rgba(229, 169, 60, 0.02) 100%);
+      border-left: 3px solid #E5A93C;
+      color: #F3C669;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#090A0C] text-[#E1E4EA] font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen p-0 md:p-5 lg:p-8 flex items-center justify-center">
+<!-- BEGIN: Desktop Application Frame Wrapper -->
+<div class="w-full max-w-[1520px] bg-[#121317] border border-white/10 rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col min-h-[920px]" data-purpose="app-shell">
+<!-- BEGIN: Top Window Header (macOS style) -->
+<header class="h-10 bg-[#0C0D10] border-b border-white/5 flex items-center px-4 select-none shrink-0 z-30" data-purpose="window-controls-bar">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]/50 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]/50 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]/50 inline-block"></span>
+</div>
+<div class="mx-auto text-xs font-medium tracking-wider text-neutral-500 uppercase flex items-center gap-1.5">
+<i class="w-3 h-3 text-neutral-600" data-lucide="lock"></i>
+<span>ibrahimzahid.dev</span>
+</div>
+<div class="w-12 text-right">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500/80 animate-pulse" title="Available for hire"></span>
+</div>
+</header>
+<!-- END: Top Window Header -->
+<!-- BEGIN: Layout Body (Sidebar + Scrollable Content) -->
+<div class="flex flex-col lg:flex-row flex-1 overflow-hidden relative">
+<!-- BEGIN: Left Vertical Navigation Sidebar -->
+<aside class="w-full lg:w-72 bg-[#0E0F12] border-r border-white/[0.06] flex flex-col justify-between shrink-0" data-purpose="sidebar">
+<div>
+<!-- Logo & Brand Header -->
+<div class="p-8 pb-6 flex flex-col items-start border-b border-white/[0.04]">
+<div class="mb-3 relative group">
+<!-- Golden Monogram Logo -->
+<span class="font-serif text-5xl font-bold tracking-tight gold-gradient-text inline-block transition-transform duration-300 group-hover:scale-105">
+                IZ
+              </span>
+</div>
+<h1 class="text-xl font-bold text-white tracking-wide">Ibrahim Zahid</h1>
+<p class="text-xs font-medium tracking-wide text-neutral-400 mt-1 uppercase">Frontend Developer</p>
+</div>
+<!-- Main Nav Links -->
+<nav class="py-6 px-3 space-y-1.5" data-purpose="sidebar-nav">
+<!-- Home (Active Item) -->
+<a class="nav-active-item flex items-center gap-3.5 px-4 py-3 rounded-r-lg text-sm font-semibold transition-all" href="#hero">
+<i class="w-5 h-5 text-brand-gold" data-lucide="home"></i>
+<span>Home</span>
+</a>
+<!-- About -->
+<a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#about">
+<i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="user"></i>
+<span>About</span>
+</a>
+<!-- Projects -->
+<a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#projects">
+<i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="layout-grid"></i>
+<span>Projects</span>
+</a>
+<!-- Skills -->
+<a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#skills">
+<i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="bar-chart-2"></i>
+<span>Skills</span>
+</a>
+<!-- Contact -->
+<a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#contact">
+<i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="mail"></i>
+<span>Contact</span>
+</a>
+</nav>
+</div>
+<!-- Sidebar Footer / Social Icons -->
+<div class="p-6 border-t border-white/[0.04]" data-purpose="sidebar-socials">
+<div class="flex items-center space-x-5 text-neutral-400 px-2">
+<!-- Github -->
+<a aria-label="GitHub Profile" class="hover:text-brand-gold transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<i class="w-5 h-5" data-lucide="github"></i>
+</a>
+<!-- LinkedIn -->
+<a aria-label="LinkedIn Profile" class="hover:text-brand-gold transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<i class="w-5 h-5" data-lucide="linkedin"></i>
+</a>
+<!-- Website / Dribbble -->
+<a aria-label="Portfolio &amp; Works" class="hover:text-brand-gold transition-colors" href="https://dribbble.com" rel="noopener noreferrer" target="_blank">
+<i class="w-5 h-5" data-lucide="globe"></i>
+</a>
+</div>
+<p class="text-[11px] text-neutral-600 mt-4 px-2">© 2025 Ibrahim Zahid. All rights reserved.</p>
+</div>
+</aside>
+<!-- END: Left Vertical Navigation Sidebar -->
+<!-- BEGIN: Scrollable Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-[#141519] flex flex-col justify-between">
+<div class="p-6 sm:p-10 lg:p-12 space-y-16">
+<!-- BEGIN: Hero Section -->
+<section class="relative flex flex-col lg:flex-row items-center justify-between gap-10 min-h-[460px] pb-6 border-b border-white/[0.05]" data-purpose="hero-section" id="hero">
+<!-- Hero Left Side: Content & Headline -->
+<div class="w-full lg:w-3/5 space-y-6 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-goldLight text-xs tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-ping"></span>
+<span>Ready for challenging web initiatives</span>
+</div>
+<div>
+<p class="text-xl md:text-2xl text-neutral-300 font-medium tracking-tight">Hello, I'm</p>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mt-1">
+                  Ibrahim Zahid
+                </h1>
+</div>
+<p class="text-base sm:text-lg text-neutral-400 font-normal max-w-lg leading-relaxed">
+                I build modern web experiences that solve real problems. Specializing in high-performance React architectures, polished design systems, and responsive user interfaces.
+              </p>
+<!-- Call to action button -->
+<div class="pt-2 flex flex-wrap gap-4 items-center">
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-gold hover:bg-brand-goldLight text-[#141519] font-bold text-sm tracking-wide transition-all shadow-lg shadow-brand-gold/20 transform hover:-translate-y-0.5" href="#projects">
+<span>View Projects</span>
+<i class="w-4 h-4 stroke-[2.5]" data-lucide="chevron-right"></i>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-neutral-300 hover:text-white font-medium text-sm border border-white/10 transition-all" href="#contact">
+<span>Get in touch</span>
+</a>
+</div>
+</div>
+<!-- Hero Right Side: Circular Portrait Halo Graphic -->
+<div class="w-full lg:w-2/5 flex items-center justify-center relative">
+<!-- Radial Glow Backdrop -->
+<div class="absolute w-80 h-80 sm:w-96 sm:h-96 hero-glow rounded-full pointer-events-none -z-0"></div>
+<!-- Circular Portrait Frame with Golden Tan Circle -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-end justify-center">
+<!-- Warm Tan Backdrop Circle -->
+<div class="absolute inset-4 rounded-full bg-gradient-to-tr from-[#9B7230] via-[#C99846] to-[#E2B766] opacity-90 shadow-2xl"></div>
+<!-- Professional Avatar Image with overflow effect -->
+<img alt="Ibrahim Zahid Portrait" class="relative z-10 w-full h-full object-cover object-top rounded-full filter contrast-[1.05] brightness-95 hover:scale-105 transition-transform duration-500 ease-out drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTtVoF7Rj4IBmLORkZJR3c3OCpQWJ8Yf9Hshy2aMTdZ4oFkUH7VDcS3dCci2fmQXlMZUeTpOCuvY9cLPPxWSMg4bNFQ1ls1PWLZ90OMFUO7A896TmAmj2RKc1aTpatrwVvBFyRVFxo0qEPzOvq7L4WvDe_DTORlVqdmkfnGQvdYItKF3U8vWQQdkfKXlDMgS4yzqlALxGasm-mh4h6SBs9V9cXm59kQvX7cpid4AnRp-usHD-dMW7hHA"/>
+<!-- Ambient Subtle Badge -->
+<div class="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-2 z-20 bg-[#121317]/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl shadow-xl flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+<span class="text-xs font-semibold text-neutral-200">5+ Years Experience</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Featured Projects Section -->
+<section data-purpose="featured-projects" id="projects">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Featured Projects</h2>
+<p class="text-sm text-neutral-400 mt-1">Carefully crafted web platforms and digital user experiences</p>
+</div>
+<a class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight flex items-center gap-1 transition-colors" href="#all-work">
+<span>View all</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+<!-- Project Showcase Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Modern Interior -->
+<article class="group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60" data-purpose="project-card">
+<div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+<img alt="Modern Interior Web Application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKL3RAHoyNaPH-g-wRceeSQO5DPh6y_cN5i-WT2wj9KisW6gIf2RuLTGlJIgAtSplJvQ09e-bPNLs_juev6YEdB6Kq810PwUPJQdYv5b4QW6imXeED7Z6Bu5gIfccLKMRZnVCFRp3oKu5Nbh9max_lW69lm3-2QtAtaQarMFEeEaIic5YBUYNbwUMvYVa8KNvSda1hLNzGUU-8D1Bd-iZ_RYy__YYQF7fxODh8nG1w0IgcXpQbHIFpUQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+<span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-neutral-300">
+                    E-Commerce
+                  </span>
+</div>
+<div class="p-5">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Modern Interior</h3>
+<p class="text-xs text-neutral-400 mt-0.5">Web Application</p>
+</div>
+<div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+<i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+</div>
+</div>
+<p class="text-xs text-neutral-400 line-clamp-2 mt-3 leading-relaxed">
+                    Minimalist furniture boutique and interior design platform with 3D product previews and AR staging.
+                  </p>
+<div class="flex items-center gap-2 mt-4 text-[11px] text-neutral-400 font-medium">
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Next.js 14</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Tailwind</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Three.js</span>
+</div>
+</div>
+</article>
+<!-- Card 2: Finance Dashboard -->
+<article class="group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60" data-purpose="project-card">
+<div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+<img alt="Finance Dashboard Web Application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhkaMW8ZGZJS98kl9AYShUR6OQr6vCqLk8gH-5nMVcxoxAk6cugH5aJygyBxFBl9zDYUCXJVFXeGrAbfk2F7bcAgpzS1q1UqnYsa45L-mt7QAshLnGzRd-deAPmaCtkh4eJrcuDRYj2-djSwqpxvBd-DS2xQE9XS0-lOYaaJ97JBoIhj2mq5FLisYcRHftJBz0zmlCmgSewSloTyITUkC7t8aAhHe-859rC7F7beGpnTwkljcCpREBRQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+<span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-neutral-300">
+                    SaaS / FinTech
+                  </span>
+</div>
+<div class="p-5">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Finance Dashboard</h3>
+<p class="text-xs text-neutral-400 mt-0.5">Web Application</p>
+</div>
+<div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+<i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+</div>
+</div>
+<p class="text-xs text-neutral-400 line-clamp-2 mt-3 leading-relaxed">
+                    Real-time crypto and equity analytics engine with customizable charting widgets and ledger tracking.
+                  </p>
+<div class="flex items-center gap-2 mt-4 text-[11px] text-neutral-400 font-medium">
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">TypeScript</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Recharts</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Node API</span>
+</div>
+</div>
+</article>
+<!-- Card 3: Travel Journal -->
+<article class="group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60" data-purpose="project-card">
+<div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+<img alt="Travel Journal Web Application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIPOGy5I11xukfGktuL9VD0lHgT4dZVc_zy_tiXkVRtHh65-PRAD4oYyL4BKA7sedGSlu0Gj6xLFKqnkzD5xTblrN9M1M8QIPUPhe4bivi33IryDfGbhv57CX_speWViH4GwdJFkpUvkJwnVqfVYr6wYUdv5bbbPbmb7_vYz8jPSO9t6XGBMuQQF_OPtwsJOdT6R00SpuQOFt3gm6_t9n8XlfpSokGM5GVdVp_wpXO2IVT6RR0_9lsaQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+<span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-neutral-300">
+                    Travel Tech
+                  </span>
+</div>
+<div class="p-5">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Travel Journal</h3>
+<p class="text-xs text-neutral-400 mt-0.5">Web Application</p>
+</div>
+<div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+<i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+</div>
+</div>
+<p class="text-xs text-neutral-400 line-clamp-2 mt-3 leading-relaxed">
+                    Interactive itinerary planning tool with geospatial tagging, offline sync, and community journals.
+                  </p>
+<div class="flex items-center gap-2 mt-4 text-[11px] text-neutral-400 font-medium">
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">React 18</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Mapbox GL</span>
+<span class="bg-neutral-800/80 px-2 py-0.5 rounded">Supabase</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: Featured Projects Section -->
+<!-- BEGIN: About & Core Competencies Section -->
+<section class="pt-6 border-t border-white/[0.05]" data-purpose="about-section" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Brief Bio -->
+<div class="lg:col-span-1 space-y-4">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Profile Snapshot</span>
+<h2 class="text-2xl font-bold text-white">Engineering with design precision</h2>
+<p class="text-sm text-neutral-400 leading-relaxed">
+                  I combine modern engineering practices with keen visual instincts. Over 5 years of transforming complex workflows into clean, accessible, and reactive frontend experiences.
+                </p>
+<div class="pt-2 flex items-center gap-3">
+<div class="text-center px-4 py-3 bg-[#18191E] rounded-xl border border-white/5 flex-1">
+<span class="block text-2xl font-extrabold text-white">40+</span>
+<span class="text-[11px] text-neutral-400 uppercase">Projects</span>
+</div>
+<div class="text-center px-4 py-3 bg-[#18191E] rounded-xl border border-white/5 flex-1">
+<span class="block text-2xl font-extrabold text-brand-gold">99.8%</span>
+<span class="text-[11px] text-neutral-400 uppercase">CSAT Score</span>
+</div>
+</div>
+</div>
+<!-- Skills & Tech Stack Grid -->
+<div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4" data-purpose="skills-grid" id="skills">
+<div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+<i class="w-5 h-5" data-lucide="code-2"></i>
+</div>
+<h3 class="text-sm font-semibold text-white">Frontend Architecture</h3>
+</div>
+<p class="text-xs text-neutral-400 mb-3">React, Next.js, Vue 3, TypeScript, State Machines &amp; Redux Toolkit.</p>
+<div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-gold h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+<i class="w-5 h-5" data-lucide="palette"></i>
+</div>
+<h3 class="text-sm font-semibold text-white">UI/UX &amp; Design Systems</h3>
+</div>
+<p class="text-xs text-neutral-400 mb-3">Tailwind CSS, Radix UI, Figma Tokens, Framer Motion, Accessibility.</p>
+<div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-gold h-full rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+<i class="w-5 h-5" data-lucide="zap"></i>
+</div>
+<h3 class="text-sm font-semibold text-white">Performance &amp; Core Web Vitals</h3>
+</div>
+<p class="text-xs text-neutral-400 mb-3">SSR, Edge Caching, Image Pipeline, Bundle Optimization, Lighthouse.</p>
+<div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-gold h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+<i class="w-5 h-5" data-lucide="server"></i>
+</div>
+<h3 class="text-sm font-semibold text-white">Backend Integration</h3>
+</div>
+<p class="text-xs text-neutral-400 mb-3">RESTful APIs, GraphQL, Node.js, Supabase, Postgres, Firebase.</p>
+<div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-gold h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: About & Core Competencies Section -->
+<!-- BEGIN: Contact & Collaboration CTA Banner -->
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#1A1B22] to-[#14151A] border border-brand-gold/20 p-8 sm:p-10" data-purpose="contact-banner" id="contact">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-2 text-center md:text-left">
+<h3 class="text-2xl font-bold text-white">Have an exciting idea or role?</h3>
+<p class="text-sm text-neutral-400 max-w-md">I am open for freelance commissions and senior frontend opportunities.</p>
+</div>
+<div class="flex items-center gap-4">
+<a class="px-6 py-3 rounded-xl bg-brand-gold hover:bg-brand-goldLight text-[#111215] font-bold text-sm tracking-wide transition-all shadow-md" href="mailto:contact@ibrahimzahid.dev">
+                  Say Hello
+                </a>
+<a class="px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 font-medium text-sm border border-white/10 transition-colors" href="#">
+                  Resume (.PDF)
+                </a>
+</div>
+</div>
+</section>
+<!-- END: Contact & Collaboration CTA Banner -->
+</div>
+<!-- BEGIN: Page Footer -->
+<footer class="py-5 px-8 border-t border-white/[0.04] bg-[#0E0F12] flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3" data-purpose="inner-footer">
+<div>Built with precision using HTML5, Tailwind CSS &amp; JavaScript</div>
+<div class="flex items-center space-x-6">
+<a class="hover:text-brand-gold transition-colors" href="#hero">Back to top</a>
+<span>•</span>
+<span>Based in London / Remote Worldwide</span>
+</div>
+</footer>
+<!-- END: Page Footer -->
+</main>
+<!-- END: Scrollable Main Content Area -->
+</div>
+<!-- END: Layout Body -->
+</div>
+<!-- END: Desktop Application Frame Wrapper -->
+<!-- BEGIN: Lucide Icon Initialization -->
+<script data-purpose="icon-loader">
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+<!-- END: Lucide Icon Initialization -->
+<!-- BEGIN: Interactive Navigation Script -->
+<script data-purpose="navigation-interactivity">
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('aside nav a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(item => {
+            item.classList.remove('nav-active-item');
+            item.classList.add('text-neutral-400', 'hover:text-white', 'hover:bg-white/[0.03]');
+            const icon = item.querySelector('i');
+            if (icon) {
+              icon.classList.remove('text-brand-gold');
+              icon.classList.add('text-neutral-500');
+            }
+          });
+
+          this.classList.add('nav-active-item');
+          this.classList.remove('text-neutral-400', 'hover:text-white', 'hover:bg-white/[0.03]');
+          const activeIcon = this.querySelector('i');
+          if (activeIcon) {
+            activeIcon.classList.remove('text-neutral-500');
+            activeIcon.classList.add('text-brand-gold');
+          }
+        });
+      });
+    });
+  </script>
+<!-- END: Interactive Navigation Script -->
+</body></html>

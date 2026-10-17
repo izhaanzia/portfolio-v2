@@ -1,0 +1,10 @@
+Created with the built-in image generation tool. Only the backdrop is generated.
+All six screenshot-based project covers retain the original project captures.
+The restaurant cover retains its existing artwork because no real capture is available.
+The webpage adds framing and color tints without replacing screenshot content.
+
+Final generation prompt:
+Create a single elegant abstract studio backdrop texture for developer portfolio project thumbnails, landscape 4:3. Muted charcoal slate, very subtle warm gold reflected light, soft paper grain, restrained diffuse illumination from upper left, gentle shadowed lower edge, spacious clean central field. Background only. Absolutely no text, letters, logos, interfaces, devices, cards, objects or mockups. It will sit behind real unchanged project screenshots composited by the webpage. Premium understated photographic texture that harmonizes with a dark charcoal and gold website.
+
+Asset: thumbnail-backdrop.jpg (optimized webpage copy)
+Source: thumbnail-backdrop.png

@@ -1,1201 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Izhaan Zia | Developer Portfolio</title>
+<meta name="description" content="Izhaan Zia — Computer Science Engineering student and developer in Nagpur. Explore my web and application projects, experience, skills, and certifications.">
+<meta name="theme-color" content="#111215">
+<link rel="icon" href="./assets/images/initials.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/personal.css"><link rel="stylesheet" href="./assets/css/stitch.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
-
-          <p class="title">Web developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
-          </p>
-
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<body><a class="skip-link" href="#main-content">Skip to content</a><div class="app-shell"><header class="window-bar"><div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="window-title"><ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon> IZHAAN ZIA / PORTFOLIO</span><span class="window-end" aria-hidden="true"></span></header><main class="workspace"><aside class="sidebar" aria-label="Profile and navigation"><a class="brand-block" href="#home" aria-label="Izhaan Zia home"><span class="brand-monogram">IZ</span><span class="brand-name">Izhaan Zia</span><span class="brand-role">WEB &amp; APP DEVELOPER</span></a><nav class="side-navigation" aria-label="Portfolio sections"><a href="#home" class="side-link" data-nav-link="home"><ion-icon name="home-outline" aria-hidden="true"></ion-icon><span>Home</span></a><a href="#about" class="side-link" data-nav-link="about"><ion-icon name="person-outline" aria-hidden="true"></ion-icon><span>About</span></a><a href="#portfolio" class="side-link" data-nav-link="portfolio"><ion-icon name="grid-outline" aria-hidden="true"></ion-icon><span>Projects</span></a><a href="#skills" class="side-link" data-nav-link="skills"><ion-icon name="bar-chart-outline" aria-hidden="true"></ion-icon><span>Skills</span></a><a href="#resume" class="side-link" data-nav-link="resume"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon><span>Resume</span></a><a href="#certifications" class="side-link" data-nav-link="certifications"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon><span>Certifications</span></a><a href="#contact" class="side-link" data-nav-link="contact"><ion-icon name="mail-outline" aria-hidden="true"></ion-icon><span>Contact</span></a></nav><div class="sidebar-bottom"><div class="sidebar-location"><ion-icon name="location-outline" aria-hidden="true"></ion-icon> Nagpur, India</div><div class="sidebar-socials"><a href="https://www.linkedin.com/in/izhaanzia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon></a><a href="mailto:izhaanzia@gmail.com" aria-label="Email Izhaan"><ion-icon name="mail-outline" aria-hidden="true"></ion-icon></a><a href="./assets/resume/Izhaan-Zia-Resume.pdf" download aria-label="Download resume"><ion-icon name="download-outline" aria-hidden="true"></ion-icon></a></div><p>© <span id="year">2026</span> Izhaan Zia</p></div></aside><div class="main-content" id="main-content"><section class="home-section" id="home" data-page="home" aria-labelledby="home-title">
+<div class="hero-copy"><p class="hero-eyebrow"><span></span>Web &amp; application development</p><p class="hero-greeting">Hello, I’m</p><h1 id="home-title" tabindex="-1">Izhaan Zia</h1><p class="hero-description">I build websites and applications that solve practical problems. A Computer Science Engineering student in Nagpur, working across frontend interfaces and application workflows.</p><div class="hero-actions"><a class="primary-button" href="#portfolio">View Projects <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon></a><a class="secondary-button" href="#contact">Get in touch</a></div></div>
+<div class="hero-identity" aria-label="Izhaan Zia monogram"><div class="monogram-orbit"><span class="hero-monogram">IZ</span><span class="orbit-label">DESIGN &amp; DEVELOPMENT</span></div><div class="hero-identity-badge"><span></span>B.Tech CSE · Class of 2028</div></div>
+</section><article class="portfolio" id="portfolio" data-page="portfolio">
+<header>
+<h2 class="h2 article-title" tabindex="-1">Featured Projects</h2>
+</header>
+<p class="body-copy section-intro">Websites, applications, and experiments built around practical needs.</p><section class="projects">
+<ul class="filter-list">
+<li class="filter-item">
+<button class="active" data-filter-btn aria-pressed="true">All</button>
+</li>
+<li class="filter-item">
+<button class="" data-filter-btn aria-pressed="false">Applications</button>
+</li>
+<li class="filter-item">
+<button class="" data-filter-btn aria-pressed="false">Web development</button>
+</li>
+<li class="filter-item"><button data-filter-btn aria-pressed="false">Computer vision</button></li>
+</ul>
+<label class="mobile-filter">Project category<select data-project-select>
+<option value="all">All</option>
+<option value="applications">Applications</option>
+<option value="web development">Web development</option>
+<option value="computer vision">Computer vision</option>
+</select>
+</label>
+<section class="project-group" data-project-group aria-labelledby="featured-projects-title">
+<h3 class="sr-only" id="featured-projects-title">Projects</h3>
+<ul class="project-list">
+<li class="project-item active" data-filter-item data-category="web development">
+<button class="project-preview" type="button" data-project-open="zapex" aria-label="View Zapex-med details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/zapex-live.jpg" alt="Screenshot of the Zapex-med study library" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Zapex-med</h4><p class="project-category">Web development</p>
+<p class="project-excerpt">Built a study material portal with a searchable subject library, student accounts, and a protected document reader.</p><div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="zapex"><img class="project-detail-cover" src="./assets/images/projects/zapex-live.jpg" alt="Screenshot of the Zapex-med study library"><h3 class="h3" id="project-dialog-title">Zapex-med</h3><p class="body-copy">Built a study material portal with a searchable subject library, student accounts, and a protected document reader. The admin dashboard supports PDF uploads, topic publishing, student management, and material access grants. Uses private file storage and role-based access to manage study content.</p><p class="project-stack">Next.js · React · TypeScript · Tailwind CSS · PostgreSQL · Prisma · Cloudflare R2</p><a class="action-link" href="https://zapex-med.vercel.app" target="_blank" rel="noopener noreferrer">Visit Zapex-med <ion-icon name="open-outline" aria-hidden="true"></ion-icon></a></template>
+</li>
+<li class="project-item active" data-filter-item data-category="web development">
+<button class="project-preview" type="button" data-project-open="wedding" aria-label="View Nehal &amp; Ariba wedding invitation details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/wedding-live.jpg" alt="Screenshot of the Nehal and Ariba wedding invitation" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Nehal & Ariba wedding invitation</h4><p class="project-category">Web development</p>
+<p class="project-excerpt">Built a responsive digital wedding invitation with an animated opening, a live countdown, an interactive date reveal, and a photo gallery.</p><div class="project-tags"><span>React</span><span>TypeScript</span><span>Vite</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="wedding"><img class="project-detail-cover" src="./assets/images/projects/wedding-live.jpg" alt="Screenshot of the Nehal and Ariba wedding invitation"><h3 class="h3" id="project-dialog-title">Nehal & Ariba wedding invitation</h3><p class="body-copy">Built a responsive digital wedding invitation with an animated opening, a live countdown, an interactive date reveal, and a photo gallery. Includes calendar links, location directions, optional music, and a validated RSVP form that prepares a WhatsApp message.</p><p class="project-stack">React · TypeScript · Vite · Tailwind CSS · Responsive design</p><a class="action-link" href="https://nehal-ariba-wedding.vercel.app" target="_blank" rel="noopener noreferrer">Visit wedding website <ion-icon name="open-outline" aria-hidden="true"></ion-icon></a></template>
+</li>
+<li class="project-item active" data-filter-item data-category="applications">
+<button class="project-preview" type="button" data-project-open="moil" aria-label="View Laptop reimbursement application details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/moil-live.jpg" alt="Screenshot of the MOIL laptop portal" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Laptop reimbursement application</h4><p class="project-category">Applications</p>
+<p class="project-excerpt">Contributing to an application that turns MOIL’s laptop reimbursement requirements into usable workflows.</p><div class="project-tags"><span>Requirements analysis</span><span>Application workflows</span><span>Testing</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="moil"><img class="project-detail-cover" src="./assets/images/projects/moil-live.jpg" alt="Screenshot of the MOIL laptop portal"><h3 class="h3" id="project-dialog-title">Laptop reimbursement application</h3><p class="body-copy">Contributing to an application that turns MOIL’s laptop reimbursement requirements into usable workflows. Work includes requirements analysis, implementation, stakeholder collaboration, debugging, and testing.</p><p class="project-stack">Requirements analysis · Application workflows · Testing</p></template>
+</li>
+<li class="project-item active" data-filter-item data-category="web development">
+<button class="project-preview" type="button" data-project-open="restaurant" aria-label="View Restaurant management application details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/restaurant.svg" alt="Restaurant management application project cover" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Restaurant management application</h4><p class="project-category">Web development</p>
+<p class="project-excerpt">Developed an application for managing restaurant orders, menus, and billing, with a user-friendly interface designed to improve workflow and efficiency.</p><div class="project-tags"><span>TypeScript</span><span>React</span><span>HTML</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="restaurant"><img class="project-detail-cover" src="./assets/images/projects/restaurant.svg" alt="Restaurant management application project cover"><h3 class="h3" id="project-dialog-title">Restaurant management application</h3><p class="body-copy">Developed an application for managing restaurant orders, menus, and billing, with a user-friendly interface designed to improve workflow and efficiency.</p><p class="project-stack">TypeScript · React · HTML · CSS</p></template>
+</li>
+</ul>
+</section>
+<section class="project-group mini-projects" id="mini-projects" data-project-group aria-labelledby="mini-projects-title">
+<div class="project-group-heading"><h3 class="h3" id="mini-projects-title" tabindex="-1">Mini projects</h3><p class="body-copy">Small tools, personal builds, and experiments.</p></div>
+<ul class="project-list">
+<li class="project-item active" data-filter-item data-category="applications">
+<button class="project-preview" type="button" data-project-open="quickwa" aria-label="View QuickWA details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/quickwa-live.jpg" alt="Screenshot of the QuickWA messaging app" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">QuickWA</h4><p class="project-category">Applications</p>
+<p class="project-excerpt">Open a WhatsApp chat without saving a contact.</p><div class="project-tags"><span>Flutter</span><span>Dart</span><span>WhatsApp links</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<a class="tile-download" href="./assets/downloads/QuickWA-1.0.0.apk" download="QuickWA-1.0.0.apk"><ion-icon name="download-outline" aria-hidden="true"></ion-icon> Download APK</a>
+<template data-project-template="quickwa"><img class="project-detail-cover" src="./assets/images/projects/quickwa-live.jpg" alt="Screenshot of the QuickWA messaging app"><h3 class="h3" id="project-dialog-title">QuickWA</h3><p class="body-copy">Open a WhatsApp chat without saving a contact. Select a country, enter or paste a phone number, and add an optional message. Includes international-number handling, input validation, and light and dark themes.</p><p class="project-stack">Flutter · Dart · WhatsApp links</p><a class="action-link apk-download" href="./assets/downloads/QuickWA-1.0.0.apk" download="QuickWA-1.0.0.apk"><ion-icon name="download-outline" aria-hidden="true"></ion-icon> Download QuickWA APK</a><p class="download-meta">Version 1.0.0 · 48.6 MB · Android 7.0+</p></template>
+</li>
+<li class="project-item active" data-filter-item data-category="computer vision">
+<button class="project-preview" type="button" data-project-open="lane-detection" aria-label="View Road lane detection details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/lane-detection-v2.jpg" alt="Road video frame processed by the lane detection project" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Road lane detection</h4><p class="project-category">Computer vision</p>
+<p class="project-excerpt">An experiment that processes road video to identify lane boundaries.</p><div class="project-tags"><span>Python</span><span>OpenCV</span><span>NumPy</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="lane-detection"><img class="project-detail-cover" src="./assets/images/projects/lane-detection-v2.jpg" alt="Road video frame processed by the lane detection project"><h3 class="h3" id="project-dialog-title">Road lane detection</h3><p class="body-copy">An experiment that processes road video to identify lane boundaries. Uses grayscale conversion, Gaussian blur, Canny edges, a region-of-interest mask, and Hough line detection to overlay estimated lanes on each frame.</p><p class="project-stack">Python · OpenCV · NumPy · Image processing</p></template>
+</li>
+<li class="project-item active" data-filter-item data-category="web development">
+<button class="project-preview" type="button" data-project-open="portfolio" aria-label="View Personal portfolio website details">
+<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/portfolio-live.jpg" alt="Personal portfolio website preview" loading="lazy" width="800" height="600"></figure>
+<h4 class="project-title">Personal portfolio website</h4><p class="project-category">Web development</p>
+<p class="project-excerpt">Designed and developed a personal portfolio with responsive layouts and modern UI components to present my background, skills, and work.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+<template data-project-template="portfolio"><img class="project-detail-cover" src="./assets/images/projects/portfolio-live.jpg" alt="Personal portfolio website preview"><h3 class="h3" id="project-dialog-title">Personal portfolio website</h3><p class="body-copy">Designed and developed a personal portfolio with responsive layouts and modern UI components to present my background, skills, and work.</p><p class="project-stack">HTML · CSS · JavaScript · Responsive design</p></template>
+</li>
+</ul>
+</section>
+</section>
+</article><article class="about" id="about" data-page="about">
+<header>
+<h2 class="h2 article-title" tabindex="-1">About me</h2>
+</header>
+<section class="about-text">
+<p>I'm Izhaan Zia, a Computer Science Engineering student and developer based in Nagpur, India. I build responsive websites and applications, with a focus on clear interfaces and practical solutions.</p>
+<p>I'm pursuing my B.Tech at Anjuman College of Engineering and Technology, with graduation expected in 2028. My experience includes web development at ByteUprise and a Systems Department internship at MOIL Limited, where I'm contributing to a laptop reimbursement application.</p>
+<p>My work spans frontend development, application workflows, debugging, and collaboration with stakeholders. I'm interested in technology consulting, cloud technologies, and bringing technical implementation closer to business needs. Outside development, I also work with video editing, content creation, and social media.</p>
+</section>
+<div class="quick-facts">
+<div>
+<strong>2028</strong>
+<span>Expected graduation</span>
+</div>
+<div>
+<strong>Nagpur</strong>
+<span>Based in India</span>
+</div>
+<div>
+<strong>Web & apps</strong>
+<span>Development focus</span>
+</div>
+</div>
+<section class="service">
+<h3 class="h3 service-title">What I do</h3>
+<ul class="service-list">
+<li class="service-item">
+<div class="service-icon-box">
+<img src="./assets/images/icon-dev.svg" alt="" width="40" height="40">
+</div>
+<div class="service-content-box">
+<h4 class="h4 service-item-title">Web development</h4>
+<p class="service-item-text">Responsive websites and web applications built with HTML, CSS, JavaScript, TypeScript, and React.</p>
+</div>
+</li>
+<li class="service-item">
+<div class="service-icon-box">
+<img src="./assets/images/icon-app.svg" alt="" width="40" height="40">
+</div>
+<div class="service-content-box">
+<h4 class="h4 service-item-title">Application development</h4>
+<p class="service-item-text">Application workflows with Spring Boot, Flutter, Dart, and Kotlin, guided by user and business requirements.</p>
+</div>
+</li>
+<li class="service-item">
+<div class="service-icon-box">
+<img src="./assets/images/icon-design.svg" alt="" width="40" height="40">
+</div>
+<div class="service-content-box">
+<h4 class="h4 service-item-title">Frontend & UI</h4>
+<p class="service-item-text">User-friendly layouts, responsive design, cross-browser compatibility, and practical interface improvements.</p>
+</div>
+</li>
+<li class="service-item">
+<div class="service-icon-box">
+<img src="./assets/images/icon-photo.svg" alt="" width="40" height="40">
+</div>
+<div class="service-content-box">
+<h4 class="h4 service-item-title">Content & social media</h4>
+<p class="service-item-text">Video editing, content creation, and social media management.</p>
+</div>
+</li>
+</ul>
+</section>
+<section class="focus-section">
+<h3 class="h3">What I’m focused on</h3>
+<p class="body-copy">Building useful applications, improving frontend experiences, exploring cloud technologies, and developing my skills in technology consulting and project delivery.</p>
+<a class="action-link" href="#portfolio">Explore my projects <ion-icon name="arrow-forward-outline" aria-hidden="true">
+</ion-icon>
+</a>
+</section>
+</article><section class="skills-section" id="skills" data-page="skills">
+<header><p class="section-kicker">MY TOOLKIT</p><h2 class="h2 article-title" tabindex="-1">Skills &amp; tools</h2></header><p class="body-copy section-intro">The technologies and practical skills I bring to a project.</p>
+<dl class="skill-groups">
+<div class="skill-group">
+<dt>Programming languages</dt>
+<dd>C, C++, C#, Python, Java, JavaScript, TypeScript, Dart, Kotlin</dd>
+</div>
+<div class="skill-group">
+<dt>Web &amp; frontend</dt>
+<dd>HTML5, CSS3, Advanced CSS, React, Responsive Design, UI/UX Basics, Website Layout Design, Cross-browser Compatibility, Web Application Development</dd>
+</div>
+<div class="skill-group">
+<dt>Application development</dt>
+<dd>Spring Boot, Flutter, Android Studio</dd>
+</div>
+<div class="skill-group">
+<dt>Cloud &amp; developer tools</dt>
+<dd>Microsoft Azure, AWS, Git, GitHub, VS Code, Chrome DevTools</dd>
+</div>
+<div class="skill-group">
+<dt>Computer science</dt>
+<dd>Data Structures &amp; Algorithms, Object-Oriented Programming, Problem Solving, Debugging</dd>
+</div>
+<div class="skill-group">
+<dt>Consulting &amp; delivery</dt>
+<dd>Requirements Analysis, Technical Solutions, Stakeholder Collaboration, Issue Identification, Project Requirements, Project Management</dd>
+</div>
+<div class="skill-group">
+<dt>Creative skills</dt>
+<dd>Video Editing, Social Media Management, Content Creation</dd>
+</div>
+</dl>
+</section><article class="resume" id="resume" data-page="resume">
+<header>
+<h2 class="h2 article-title" tabindex="-1">Resume</h2>
+</header>
+<div class="resume-intro">
+<p class="body-copy">My education, experience, and the skills I bring to a project.</p>
+<a class="action-link" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
+<ion-icon name="download-outline" aria-hidden="true">
+</ion-icon> Download resume</a>
+</div>
+<section class="timeline">
+<div class="title-wrapper">
+<div class="icon-box">
+<ion-icon name="briefcase-outline" aria-hidden="true">
+</ion-icon>
+</div>
+<h3 class="h3">Experience</h3>
+</div>
+<ol class="timeline-list">
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Systems Department Intern · MOIL Limited</h4>
+<span>Jun 2026 – Present · Nagpur, India</span>
+<p class="timeline-text">Contributing to a laptop reimbursement application, translating organizational requirements into application workflows and technical implementation. Collaborating with the Systems Department and internal stakeholders to understand user needs, constraints, and dependencies. Debugging and testing application issues to improve reliability and user experience, while supporting project delivery and aligning functionality with business requirements.</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Web Development Intern · ByteUprise</h4>
+<span>Apr 2025 – May 2025 · Remote</span>
+<p class="timeline-text">Developed responsive web pages using HTML, CSS, and JavaScript based on project requirements and user needs. Improved frontend interfaces and website performance, identified and fixed usability and technical issues, and applied debugging techniques, development practices, and Git-based version control.</p>
+</li>
+</ol>
+</section>
+<section class="timeline">
+<div class="title-wrapper">
+<div class="icon-box">
+<ion-icon name="school-outline" aria-hidden="true">
+</ion-icon>
+</div>
+<h3 class="h3">Education</h3>
+</div>
+<ol class="timeline-list">
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">B.Tech in Computer Science Engineering</h4>
+<span>2024 – 2028 · Expected graduation: 2028</span>
+<p class="timeline-text">Anjuman College of Engineering and Technology, Nagpur.</p>
+</li>
+</ol>
+</section>
+
+</article><article class="certifications" id="certifications" data-page="certifications">
+<header>
+<h2 class="h2 article-title" tabindex="-1">Certifications</h2>
+</header>
+<p class="body-copy section-intro">Training, certifications, and practical job simulations.</p>
+<section class="timeline">
+<div class="title-wrapper">
+<div class="icon-box">
+<ion-icon name="ribbon-outline" aria-hidden="true">
+</ion-icon>
+</div>
+<h3 class="h3">Training & certifications</h3>
+</div>
+<ol class="timeline-list">
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Python · Bits Code</h4>
+<span>Feb 2025 – Mar 2025 · Nagpur</span>
+<p class="timeline-text">Training in Python programming.</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">C/C++ Programming · Udemy</h4>
+<span>Jan 2025 · Online</span>
+<p class="timeline-text">Certification in C and C++ programming.</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Goldman Sachs Software Engineering Job Simulation · Forage</h4>
+<span>Nov 2024 · Online</span>
+<p class="timeline-text">Completed the Goldman Sachs software engineering job simulation.</p>
+</li>
+<li class="timeline-item">
+<h4 class="h4 timeline-item-title">Advanced HTML · UpGrad</h4>
+<span>Sep 2024 – Dec 2024 · Nagpur</span>
+<p class="timeline-text">Certification in advanced HTML.</p>
+</li>
+</ol>
+</section>
+</article><section class="contact-banner"><div><p class="section-kicker">LET’S BUILD SOMETHING USEFUL</p><h2>Have a project or opportunity?</h2><p>Let’s talk about your idea and how I can contribute.</p></div><div class="hero-actions"><a class="primary-button" href="mailto:izhaanzia@gmail.com">Say hello <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon></a><a class="secondary-button" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>Resume (.PDF)</a></div></section><article class="contact" id="contact" data-page="contact">
+<header>
+<h2 class="h2 article-title" tabindex="-1">Contact</h2>
+</header>
+<section class="contact-intro">
+<h3 class="h3">Let’s connect</h3>
+<p class="body-copy">Have an opportunity, a project, or an idea to discuss? Get in touch by email, phone, or LinkedIn.</p>
+<div class="contact-actions">
+<a class="action-link" href="mailto:izhaanzia@gmail.com">Email me</a>
+<a class="action-link" href="tel:+919552997786">Call me</a>
+<a class="action-link" href="https://www.linkedin.com/in/izhaanzia" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+</div>
+<p class="body-copy">Nagpur, Maharashtra, India</p>
+</section>
+<section class="contact-form">
+<h3 class="h3 form-title">Write a message</h3>
+<p class="body-copy section-intro">This form opens your email app with a draft addressed to me.</p>
+<form class="form" data-form>
+<div class="input-wrapper">
+<label>Your name<input type="text" name="fullname" class="form-input" autocomplete="name" required>
+</label>
+<label>Your email<input type="email" name="email" class="form-input" autocomplete="email" required>
+</label>
+</div>
+<label>Message<textarea name="message" class="form-input" rows="6" required>
+</textarea>
+</label>
+<button class="form-btn" type="submit">
+<ion-icon name="mail-outline" aria-hidden="true">
+</ion-icon>
+<span>Open email draft</span>
+</button>
+<p class="form-status body-copy" role="status">
+</p>
+</form>
+</section>
+</article><footer class="site-footer"><span>Designed with Stitch · Built with HTML, CSS &amp; JavaScript</span><a href="#home">Back to top ↑</a><span>Nagpur, India</span></footer></div></main></div><dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title"><button class="project-dialog-close" type="button" data-project-close aria-label="Close project details"><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button><div data-project-details></div></dialog>
+<script src="./assets/js/script.js">
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+</script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+</script>
 </body>
-
 </html>
