@@ -1,344 +1,1197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Izhaan Zia | Developer Portfolio</title>
-<meta name="description" content="Izhaan Zia — Computer Science Engineering student and developer in Nagpur. Explore my web and application projects, experience, skills, and certifications.">
+<title>Izhaan Zia — Developer Portfolio</title>
+<meta name="description" content="Izhaan Zia — Computer Science Engineering student and developer in Nagpur. Web development, full-stack applications, and workflow automation.">
 <meta name="theme-color" content="#111215">
 <link rel="icon" href="./assets/images/initials.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="./assets/css/personal.css">
-<link rel="stylesheet" href="./assets/css/stitch.css">
+
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body><a class="skip-link" href="#main-content">Skip to content</a><div class="app-shell"><header class="window-bar"><div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="window-title"><ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon> IZHAAN ZIA / PORTFOLIO</span><span class="window-end" aria-hidden="true"></span></header><main class="workspace"><aside class="sidebar" aria-label="Profile and navigation"><a class="brand-block" href="#home" aria-label="Izhaan Zia home"><span class="brand-monogram">IZ</span><span class="brand-name">Izhaan Zia</span><span class="brand-role">WEB &amp; APP DEVELOPER</span></a><nav class="side-navigation" aria-label="Portfolio sections"><a href="#home" class="side-link" data-nav-link="home"><ion-icon name="home-outline" aria-hidden="true"></ion-icon><span>Home</span></a><a href="#about" class="side-link" data-nav-link="about"><ion-icon name="person-outline" aria-hidden="true"></ion-icon><span>About</span></a><a href="#portfolio" class="side-link" data-nav-link="portfolio"><ion-icon name="grid-outline" aria-hidden="true"></ion-icon><span>Projects</span></a><a href="#skills" class="side-link" data-nav-link="skills"><ion-icon name="bar-chart-outline" aria-hidden="true"></ion-icon><span>Skills</span></a><a href="#resume" class="side-link" data-nav-link="resume"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon><span>Resume</span></a><a href="#certifications" class="side-link" data-nav-link="certifications"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon><span>Certifications</span></a><a href="#contact" class="side-link" data-nav-link="contact"><ion-icon name="mail-outline" aria-hidden="true"></ion-icon><span>Contact</span></a></nav><div class="sidebar-bottom"><div class="sidebar-location"><ion-icon name="location-outline" aria-hidden="true"></ion-icon> Nagpur, India</div><div class="sidebar-socials"><a href="https://github.com/izhaanzia" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><ion-icon name="logo-github" aria-hidden="true"></ion-icon></a><a href="https://www.linkedin.com/in/izhaanzia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon></a><a href="mailto:izhaanzia@gmail.com" aria-label="Email Izhaan"><ion-icon name="mail-outline" aria-hidden="true"></ion-icon></a><a href="./assets/resume/Izhaan-Zia-Resume.pdf" download aria-label="Download resume"><ion-icon name="download-outline" aria-hidden="true"></ion-icon></a></div><p>© <span id="year">2026</span> Izhaan Zia</p></div></aside><div class="main-content" id="main-content"><section class="home-section" id="home" data-page="home" aria-labelledby="home-title">
-<div class="hero-copy"><p class="hero-eyebrow"><span></span>Web &amp; application development</p><p class="hero-greeting">Hello, I’m</p><h1 id="home-title" tabindex="-1">Izhaan Zia</h1><p class="hero-description">I build websites and applications that solve practical problems. A Computer Science Engineering student in Nagpur, working across frontend interfaces, full-stack applications, and workflow automation.</p><div class="hero-actions"><a class="primary-button" href="#portfolio">View Projects <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon></a><a class="secondary-button" href="#contact">Get in touch</a></div></div>
-<div class="hero-identity" aria-label="Izhaan Zia monogram"><div class="monogram-orbit"><span class="hero-monogram">IZ</span><span class="orbit-label">DESIGN &amp; DEVELOPMENT</span></div><div class="hero-identity-badge"><span></span>B.Tech CSE · Class of 2028</div></div>
-</section><article class="portfolio" id="portfolio" data-page="portfolio">
-<header>
-<h2 class="h2 article-title" tabindex="-1">Featured Projects</h2>
-</header>
-<p class="body-copy section-intro">Websites, applications, and experiments built around practical needs.</p><section class="projects">
-<ul class="filter-list">
-<li class="filter-item">
-<button class="active" data-filter-btn aria-pressed="true">All</button>
-</li>
-<li class="filter-item">
-<button class="" data-filter-btn aria-pressed="false">Applications</button>
-</li>
-<li class="filter-item">
-<button class="" data-filter-btn aria-pressed="false">Web development</button>
-</li>
-<li class="filter-item"><button data-filter-btn aria-pressed="false">Computer vision</button></li>
-</ul>
-<label class="mobile-filter">Project category<select data-project-select>
-<option value="all">All</option>
-<option value="applications">Applications</option>
-<option value="web development">Web development</option>
-<option value="computer vision">Computer vision</option>
-</select>
-</label>
-<section class="project-group" data-project-group aria-labelledby="featured-projects-title">
-<h3 class="sr-only" id="featured-projects-title">Projects</h3>
-<ul class="project-list">
-<li class="project-item active" data-filter-item data-category="web development">
-<button class="project-preview" type="button" data-project-open="zapex" aria-label="View Zapex-med details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/zapex-live.jpg" alt="Screenshot of the Zapex-med study library" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Zapex-med</h4><p class="project-category">Web development</p>
-<p class="project-excerpt">Built a study material portal with a searchable subject library, student accounts, and a protected document reader.</p><div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="zapex"><img class="project-detail-cover" src="./assets/images/projects/zapex-live.jpg" alt="Screenshot of the Zapex-med study library"><h3 class="h3" id="project-dialog-title">Zapex-med</h3><p class="body-copy">Built a study material portal with a searchable subject library, student accounts, and a protected document reader. The admin dashboard supports PDF uploads, topic publishing, student management, and material access grants. Uses private file storage and role-based access to manage study content.</p><p class="project-stack">Next.js · React · TypeScript · Tailwind CSS · PostgreSQL · Prisma · Cloudflare R2</p><a class="action-link" href="https://zapex-med.vercel.app" target="_blank" rel="noopener noreferrer">Visit Zapex-med <ion-icon name="open-outline" aria-hidden="true"></ion-icon></a></template>
-</li>
-<li class="project-item active" data-filter-item data-category="web development">
-<button class="project-preview" type="button" data-project-open="wedding" aria-label="View Nehal &amp; Ariba wedding invitation details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/wedding-live.jpg" alt="Screenshot of the Nehal and Ariba wedding invitation" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Nehal & Ariba wedding invitation</h4><p class="project-category">Web development</p>
-<p class="project-excerpt">Built a responsive digital wedding invitation with an animated opening, a live countdown, an interactive date reveal, and a photo gallery.</p><div class="project-tags"><span>React</span><span>TypeScript</span><span>Vite</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="wedding"><img class="project-detail-cover" src="./assets/images/projects/wedding-live.jpg" alt="Screenshot of the Nehal and Ariba wedding invitation"><h3 class="h3" id="project-dialog-title">Nehal & Ariba wedding invitation</h3><p class="body-copy">Built a responsive digital wedding invitation with an animated opening, a live countdown, an interactive date reveal, and a photo gallery. Includes calendar links, location directions, optional music, and a validated RSVP form that prepares a WhatsApp message.</p><p class="project-stack">React · TypeScript · Vite · Tailwind CSS · Responsive design</p><a class="action-link" href="https://nehal-ariba-wedding.vercel.app" target="_blank" rel="noopener noreferrer">Visit wedding website <ion-icon name="open-outline" aria-hidden="true"></ion-icon></a></template>
-</li>
-<li class="project-item active" data-filter-item data-category="applications">
-<button class="project-preview" type="button" data-project-open="replora" aria-label="View Replora CRM details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/replora.svg" alt="Replora CRM and WhatsApp AI Agent interface cover" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Replora CRM & WhatsApp AI Agent</h4><p class="project-category">Applications</p>
-<p class="project-excerpt">Built an intelligent CRM and customer follow-up platform integrated with an automated WhatsApp AI agent via n8n workflows.</p><div class="project-tags"><span>JavaScript</span><span>n8n</span><span>WhatsApp AI</span><span>Automation</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="replora"><img class="project-detail-cover" src="./assets/images/projects/replora.svg" alt="Replora CRM and WhatsApp AI Agent interface cover"><h3 class="h3" id="project-dialog-title">Replora CRM & WhatsApp AI Agent</h3><p class="body-copy">Designed and engineered a full-featured customer relationship management and automated follow-up platform. Features live webhook dispatch to n8n workflows, incoming/outgoing WhatsApp chat simulation, lead lifecycle kanban tracking, consultation scheduling with Google Calendar sync, and instant quotation follow-ups.</p><p class="project-stack">JavaScript · HTML5 · CSS3 · n8n Workflows · WhatsApp Webhook API · Automation</p></template>
-</li>
-<li class="project-item active" data-filter-item data-category="applications">
-<button class="project-preview" type="button" data-project-open="moil" aria-label="View Laptop reimbursement application details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/moil-live.jpg" alt="Screenshot of the MOIL laptop portal" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Laptop reimbursement application</h4><p class="project-category">Applications</p>
-<p class="project-excerpt">Contributing to an application that turns MOIL’s laptop reimbursement requirements into usable workflows.</p><div class="project-tags"><span>Requirements analysis</span><span>Application workflows</span><span>Testing</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="moil"><img class="project-detail-cover" src="./assets/images/projects/moil-live.jpg" alt="Screenshot of the MOIL laptop portal"><h3 class="h3" id="project-dialog-title">Laptop reimbursement application</h3><p class="body-copy">Contributing to an application that turns MOIL’s laptop reimbursement requirements into usable workflows. Work includes requirements analysis, implementation, stakeholder collaboration, debugging, and testing.</p><p class="project-stack">Requirements analysis · Application workflows · Testing</p></template>
-</li>
-<li class="project-item active" data-filter-item data-category="web development">
-<button class="project-preview" type="button" data-project-open="restaurant" aria-label="View Restaurant management application details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/restaurant.svg" alt="Restaurant management application project cover" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Restaurant management application</h4><p class="project-category">Web development</p>
-<p class="project-excerpt">Developed an application for managing restaurant orders, menus, and billing, with a user-friendly interface designed to improve workflow and efficiency.</p><div class="project-tags"><span>TypeScript</span><span>React</span><span>HTML</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="restaurant"><img class="project-detail-cover" src="./assets/images/projects/restaurant.svg" alt="Restaurant management application project cover"><h3 class="h3" id="project-dialog-title">Restaurant management application</h3><p class="body-copy">Developed an application for managing restaurant orders, menus, and billing, with a user-friendly interface designed to improve workflow and efficiency.</p><p class="project-stack">TypeScript · React · HTML · CSS</p></template>
-</li>
-</ul>
-</section>
-<section class="project-group mini-projects" id="mini-projects" data-project-group aria-labelledby="mini-projects-title">
-<div class="project-group-heading"><h3 class="h3" id="mini-projects-title" tabindex="-1">Mini projects</h3><p class="body-copy">Small tools, personal builds, and experiments.</p></div>
-<ul class="project-list">
-<li class="project-item active" data-filter-item data-category="applications">
-<button class="project-preview" type="button" data-project-open="quickwa" aria-label="View QuickWA details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/quickwa-live.jpg" alt="Screenshot of the QuickWA messaging app" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">QuickWA</h4><p class="project-category">Applications</p>
-<p class="project-excerpt">Open a WhatsApp chat without saving a contact.</p><div class="project-tags"><span>Flutter</span><span>Dart</span><span>WhatsApp links</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<a class="tile-download" href="./assets/downloads/QuickWA-1.0.0.apk" download="QuickWA-1.0.0.apk"><ion-icon name="download-outline" aria-hidden="true"></ion-icon> Download APK</a>
-<template data-project-template="quickwa"><img class="project-detail-cover" src="./assets/images/projects/quickwa-live.jpg" alt="Screenshot of the QuickWA messaging app"><h3 class="h3" id="project-dialog-title">QuickWA</h3><p class="body-copy">Open a WhatsApp chat without saving a contact. Select a country, enter or paste a phone number, and add an optional message. Includes international-number handling, input validation, and light and dark themes.</p><p class="project-stack">Flutter · Dart · WhatsApp links</p><a class="action-link apk-download" href="./assets/downloads/QuickWA-1.0.0.apk" download="QuickWA-1.0.0.apk"><ion-icon name="download-outline" aria-hidden="true"></ion-icon> Download QuickWA APK</a><a class="action-link" href="https://github.com/izhaanzia" target="_blank" rel="noopener noreferrer">View on GitHub <ion-icon name="logo-github" aria-hidden="true"></ion-icon></a><p class="download-meta">Version 1.0.0 · 48.6 MB · Android 7.0+</p></template>
-</li>
-<li class="project-item active" data-filter-item data-category="computer vision">
-<button class="project-preview" type="button" data-project-open="lane-detection" aria-label="View Road lane detection details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/lane-detection-v2.jpg" alt="Road video frame processed by the lane detection project" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Road lane detection</h4><p class="project-category">Computer vision</p>
-<p class="project-excerpt">An experiment that processes road video to identify lane boundaries.</p><div class="project-tags"><span>Python</span><span>OpenCV</span><span>NumPy</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="lane-detection"><img class="project-detail-cover" src="./assets/images/projects/lane-detection-v2.jpg" alt="Road video frame processed by the lane detection project"><h3 class="h3" id="project-dialog-title">Road lane detection</h3><p class="body-copy">An experiment that processes road video to identify lane boundaries. Uses grayscale conversion, Gaussian blur, Canny edges, a region-of-interest mask, and Hough line detection to overlay estimated lanes on each frame.</p><p class="project-stack">Python · OpenCV · NumPy · Image processing</p></template>
-</li>
-<li class="project-item active" data-filter-item data-category="web development">
-<button class="project-preview" type="button" data-project-open="portfolio" aria-label="View Personal portfolio website details">
-<figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></div><img src="./assets/images/projects/portfolio-live.jpg" alt="Personal portfolio website preview" loading="lazy" width="800" height="600"></figure>
-<h4 class="project-title">Personal portfolio website</h4><p class="project-category">Web development</p>
-<p class="project-excerpt">Designed and developed a personal portfolio with responsive layouts and modern UI components to present my background, skills, and work.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="project-open-icon" aria-hidden="true"><ion-icon name="arrow-up-outline"></ion-icon></span></button>
-<template data-project-template="portfolio"><img class="project-detail-cover" src="./assets/images/projects/portfolio-live.jpg" alt="Personal portfolio website preview"><h3 class="h3" id="project-dialog-title">Personal portfolio website</h3><p class="body-copy">Designed and developed a personal portfolio with responsive layouts and modern UI components to present my background, skills, and work.</p><p class="project-stack">HTML · CSS · JavaScript · Responsive design</p><a class="action-link" href="https://github.com/izhaanzia/portfolio-v2" target="_blank" rel="noopener noreferrer">View repository on GitHub <ion-icon name="logo-github" aria-hidden="true"></ion-icon></a></template>
-</li>
-</ul>
-</section>
-</section>
-</article><article class="about" id="about" data-page="about">
-<header>
-<h2 class="h2 article-title" tabindex="-1">About me</h2>
-</header>
-<section class="about-text">
-<p>I'm Izhaan Zia, a Computer Science Engineering student and developer based in Nagpur, India. I build responsive websites and applications, with a focus on clear interfaces and practical solutions.</p>
-<p>I'm pursuing my B.Tech at Anjuman College of Engineering and Technology, with graduation expected in 2028. My experience includes web development at ByteUprise and a Systems Department internship at MOIL Limited, where I'm contributing to a laptop reimbursement application.</p>
-<p>My work spans frontend development, application workflows, debugging, and collaboration with stakeholders. I'm interested in technology consulting, cloud technologies, and bringing technical implementation closer to business needs. Outside development, I also work with video editing, content creation, and social media.</p>
-</section>
-<div class="quick-facts">
-<div>
-<strong>2028</strong>
-<span>Expected graduation</span>
-</div>
-<div>
-<strong>Nagpur</strong>
-<span>Based in India</span>
-</div>
-<div>
-<strong>Web & apps</strong>
-<span>Development focus</span>
-</div>
-</div>
-<section class="service">
-<h3 class="h3 service-title">What I do</h3>
-<ul class="service-list">
-<li class="service-item">
-<div class="service-icon-box">
-<img src="./assets/images/icon-dev.svg" alt="" width="40" height="40">
-</div>
-<div class="service-content-box">
-<h4 class="h4 service-item-title">Web development</h4>
-<p class="service-item-text">Responsive websites and web applications built with HTML, CSS, JavaScript, TypeScript, and React.</p>
-</div>
-</li>
-<li class="service-item">
-<div class="service-icon-box">
-<img src="./assets/images/icon-app.svg" alt="" width="40" height="40">
-</div>
-<div class="service-content-box">
-<h4 class="h4 service-item-title">Application development</h4>
-<p class="service-item-text">Application workflows with Spring Boot, Flutter, Dart, and Kotlin, guided by user and business requirements.</p>
-</div>
-</li>
-<li class="service-item">
-<div class="service-icon-box">
-<img src="./assets/images/icon-design.svg" alt="" width="40" height="40">
-</div>
-<div class="service-content-box">
-<h4 class="h4 service-item-title">Frontend & UI</h4>
-<p class="service-item-text">User-friendly layouts, responsive design, cross-browser compatibility, and practical interface improvements.</p>
-</div>
-</li>
-<li class="service-item">
-<div class="service-icon-box">
-<img src="./assets/images/icon-photo.svg" alt="" width="40" height="40">
-</div>
-<div class="service-content-box">
-<h4 class="h4 service-item-title">Content & social media</h4>
-<p class="service-item-text">Video editing, content creation, and social media management.</p>
-</div>
-</li>
-</ul>
-</section>
-<section class="focus-section">
-<h3 class="h3">What I’m focused on</h3>
-<p class="body-copy">Building useful applications, improving frontend experiences, exploring cloud technologies, and developing my skills in technology consulting and project delivery.</p>
-<a class="action-link" href="#portfolio">Explore my projects <ion-icon name="arrow-forward-outline" aria-hidden="true">
-</ion-icon>
-</a>
-</section>
-</article><section class="skills-section" id="skills" data-page="skills">
-<header><p class="section-kicker">MY TOOLKIT</p><h2 class="h2 article-title" tabindex="-1">Skills &amp; tools</h2></header><p class="body-copy section-intro">The technologies and practical skills I bring to a project.</p>
-<dl class="skill-groups">
-<div class="skill-group">
-<dt>Programming languages</dt>
-<dd>C, C++, C#, Python, Java, JavaScript, TypeScript, Dart, Kotlin</dd>
-</div>
-<div class="skill-group">
-<dt>Web &amp; frontend</dt>
-<dd>HTML5, CSS3, Advanced CSS, React, Responsive Design, UI/UX Basics, Website Layout Design, Cross-browser Compatibility, Web Application Development</dd>
-</div>
-<div class="skill-group">
-<dt>Application development &amp; automation</dt>
-<dd>Spring Boot, Flutter, Android Studio, n8n Automation, Webhooks, WhatsApp AI Integration</dd>
-</div>
-<div class="skill-group">
-<dt>Cloud &amp; developer tools</dt>
-<dd>Microsoft Azure, AWS, Git, GitHub, VS Code, Chrome DevTools</dd>
-</div>
-<div class="skill-group">
-<dt>Computer science</dt>
-<dd>Data Structures &amp; Algorithms, Object-Oriented Programming, Problem Solving, Debugging</dd>
-</div>
-<div class="skill-group">
-<dt>Consulting &amp; delivery</dt>
-<dd>Requirements Analysis, Technical Solutions, Stakeholder Collaboration, Issue Identification, Project Requirements, Project Management</dd>
-</div>
-<div class="skill-group">
-<dt>Creative skills</dt>
-<dd>Video Editing, Social Media Management, Content Creation</dd>
-</div>
-</dl>
-</section><article class="resume" id="resume" data-page="resume">
-<header>
-<h2 class="h2 article-title" tabindex="-1">Resume</h2>
-</header>
-<div class="resume-intro">
-<p class="body-copy">My education, experience, and the skills I bring to a project.</p>
-<a class="action-link" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
-<ion-icon name="download-outline" aria-hidden="true">
-</ion-icon> Download resume</a>
-</div>
-<section class="timeline">
-<div class="title-wrapper">
-<div class="icon-box">
-<ion-icon name="briefcase-outline" aria-hidden="true">
-</ion-icon>
-</div>
-<h3 class="h3">Experience</h3>
-</div>
-<ol class="timeline-list">
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">Systems Department Intern · MOIL Limited</h4>
-<span>Jun 2026 – Present · Nagpur, India</span>
-<p class="timeline-text">Contributing to a laptop reimbursement application, translating organizational requirements into application workflows and technical implementation. Collaborating with the Systems Department and internal stakeholders to understand user needs, constraints, and dependencies. Debugging and testing application issues to improve reliability and user experience, while supporting project delivery and aligning functionality with business requirements.</p>
-</li>
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">Web Development Intern · ByteUprise</h4>
-<span>Apr 2025 – May 2025 · Remote</span>
-<p class="timeline-text">Developed responsive web pages using HTML, CSS, and JavaScript based on project requirements and user needs. Improved frontend interfaces and website performance, identified and fixed usability and technical issues, and applied debugging techniques, development practices, and Git-based version control.</p>
-</li>
-</ol>
-</section>
-<section class="timeline">
-<div class="title-wrapper">
-<div class="icon-box">
-<ion-icon name="school-outline" aria-hidden="true">
-</ion-icon>
-</div>
-<h3 class="h3">Education</h3>
-</div>
-<ol class="timeline-list">
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">B.Tech in Computer Science Engineering</h4>
-<span>2024 – 2028 · Expected graduation: 2028</span>
-<p class="timeline-text">Anjuman College of Engineering and Technology, Nagpur.</p>
-</li>
-</ol>
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-</article><article class="certifications" id="certifications" data-page="certifications">
-<header>
-<h2 class="h2 article-title" tabindex="-1">Certifications</h2>
-</header>
-<p class="body-copy section-intro">Training, certifications, and practical job simulations.</p>
-<section class="timeline">
-<div class="title-wrapper">
-<div class="icon-box">
-<ion-icon name="ribbon-outline" aria-hidden="true">
-</ion-icon>
-</div>
-<h3 class="h3">Training & certifications</h3>
-</div>
-<ol class="timeline-list">
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">Python · Bits Code</h4>
-<span>Feb 2025 – Mar 2025 · Nagpur</span>
-<p class="timeline-text">Training in Python programming.</p>
-</li>
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">C/C++ Programming · Udemy</h4>
-<span>Jan 2025 · Online</span>
-<p class="timeline-text">Certification in C and C++ programming.</p>
-</li>
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">Goldman Sachs Software Engineering Job Simulation · Forage</h4>
-<span>Nov 2024 · Online</span>
-<p class="timeline-text">Completed the Goldman Sachs software engineering job simulation.</p>
-</li>
-<li class="timeline-item">
-<h4 class="h4 timeline-item-title">Advanced HTML · UpGrad</h4>
-<span>Sep 2024 – Dec 2024 · Nagpur</span>
-<p class="timeline-text">Certification in advanced HTML.</p>
-</li>
-</ol>
-</section>
-</article><section class="contact-banner"><div><p class="section-kicker">LET’S BUILD SOMETHING USEFUL</p><h2>Have a project or opportunity?</h2><p>Let’s talk about your idea and how I can contribute.</p></div><div class="hero-actions"><a class="primary-button" href="mailto:izhaanzia@gmail.com">Say hello <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon></a><a class="secondary-button" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>Resume (.PDF)</a></div></section><article class="contact" id="contact" data-page="contact">
-<header>
-<h2 class="h2 article-title" tabindex="-1">Contact</h2>
-</header>
-<section class="contact-intro">
-<h3 class="h3">Let’s connect</h3>
-<p class="body-copy">Have an opportunity, a project, or an idea to discuss? Get in touch by email, phone, LinkedIn, or GitHub.</p>
-<div class="contact-actions">
-<a class="action-link" href="mailto:izhaanzia@gmail.com">Email me</a>
-<a class="action-link" href="tel:+919552997786">Call me</a>
-<a class="action-link" href="https://www.linkedin.com/in/izhaanzia" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-<a class="action-link" href="https://github.com/izhaanzia" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-</div>
-<p class="body-copy">Nagpur, Maharashtra, India</p>
-</section>
-<section class="contact-form">
-<h3 class="h3 form-title">Write a message</h3>
-<p class="body-copy section-intro">This form opens your email app with a draft addressed to me.</p>
-<form class="form" data-form>
-<div class="input-wrapper">
-<label>Your name<input type="text" name="fullname" class="form-input" autocomplete="name" required>
-</label>
-<label>Your email<input type="email" name="email" class="form-input" autocomplete="email" required>
-</label>
-</div>
-<label>Message<textarea name="message" class="form-input" rows="6" required>
-</textarea>
-</label>
-<button class="form-btn" type="submit">
-<ion-icon name="mail-outline" aria-hidden="true">
-</ion-icon>
-<span>Open email draft</span>
-</button>
-<p class="form-status body-copy" role="status">
-</p>
-</form>
-</section>
-</article><footer class="site-footer"><span>Designed with Stitch · Built with HTML, CSS &amp; JavaScript</span><a href="#home">Back to top ↑</a><span>Nagpur, India</span></footer></div></main></div><dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title"><button class="project-dialog-close" type="button" data-project-close aria-label="Close project details"><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button><div data-project-details></div></dialog>
-<script src="./assets/js/script.js">
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Tailwind Configuration -->
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          serif: ['Cinzel', 'serif'],
+        },
+        colors: {
+          brand: {
+            gold: '#E5A93C',
+            goldLight: '#F3C669',
+            goldDark: '#B87B18',
+            charcoal: '#111215',
+            cardBg: '#18191E',
+            sidebar: '#0E0F12',
+            surface: '#1E2026',
+            border: 'rgba(255, 255, 255, 0.08)'
+          }
+        }
+      }
+    }
+  }
 </script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
-</script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+
+<style>
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0E0F12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252830;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E5A93C;
+  }
+
+  /* Ambient glow effects */
+  .hero-glow {
+    background: radial-gradient(circle, rgba(229, 169, 60, 0.28) 0%, rgba(229, 169, 60, 0.06) 45%, transparent 70%);
+  }
+
+  /* Gold Monogram Gradient */
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #FAD980 0%, #E5A93C 50%, #A46F19 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Active Sidebar Nav Glow */
+  .nav-active-item {
+    background: linear-gradient(90deg, rgba(229, 169, 60, 0.16) 0%, rgba(229, 169, 60, 0.02) 100%);
+    border-left: 3px solid #E5A93C;
+    color: #F3C669;
+  }
+
+  /* Project dialog styling */
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
+</style>
+</head>
+<body class="bg-[#090A0C] text-[#E1E4EA] font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen p-0 md:p-4 lg:p-8 flex items-center justify-center">
+
+<!-- Desktop Application Frame Wrapper (Stitch App Shell) -->
+<div class="w-full max-w-[1520px] bg-[#121317] border border-white/10 rounded-none md:rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col min-h-screen md:min-h-[920px]">
+
+  <!-- Top Window Header (macOS style bar) -->
+  <header class="h-10 bg-[#0C0D10] border-b border-white/5 flex items-center px-4 select-none shrink-0 z-30">
+    <div class="flex items-center space-x-2">
+      <span class="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]/50 inline-block"></span>
+      <span class="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]/50 inline-block"></span>
+      <span class="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]/50 inline-block"></span>
+    </div>
+    <div class="mx-auto text-xs font-medium tracking-wider text-neutral-400 uppercase flex items-center gap-1.5">
+      <i class="w-3 h-3 text-brand-gold" data-lucide="code-2"></i>
+      <span class="tracking-widest">IZHAAN ZIA / PORTFOLIO</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="Open to opportunities"></span>
+      <span class="hidden sm:inline-block text-[11px] text-neutral-400 font-medium">Open to opportunities</span>
+    </div>
+  </header>
+
+  <!-- Layout Body (Sidebar + Scrollable Content) -->
+  <div class="flex flex-col lg:flex-row flex-1 overflow-hidden relative">
+
+    <!-- Left Vertical Navigation Sidebar -->
+    <aside class="w-full lg:w-72 bg-[#0E0F12] border-r border-white/[0.06] flex flex-col justify-between shrink-0">
+      <div>
+        <!-- Logo & Brand Header -->
+        <a href="#home" class="p-6 sm:p-8 pb-6 flex flex-col items-start border-b border-white/[0.04] group transition-all">
+          <div class="mb-2 relative">
+            <span class="font-serif text-5xl font-bold tracking-tight gold-gradient-text inline-block transition-transform duration-300 group-hover:scale-105">
+              IZ
+            </span>
+          </div>
+          <h1 class="text-xl font-bold text-white tracking-wide">Izhaan Zia</h1>
+          <p class="text-[11px] font-semibold tracking-wider text-neutral-400 mt-1 uppercase">Web &amp; App Developer</p>
+        </a>
+
+        <!-- Main Nav Links -->
+        <nav class="py-4 px-3 space-y-1" id="nav-container">
+          <a class="nav-active-item flex items-center gap-3.5 px-4 py-3 rounded-r-lg text-sm font-semibold transition-all" href="#home" data-nav="home">
+            <i class="w-5 h-5 text-brand-gold" data-lucide="home"></i>
+            <span>Home</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#about" data-nav="about">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="user"></i>
+            <span>About</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#portfolio" data-nav="portfolio">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="layout-grid"></i>
+            <span>Projects</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#skills" data-nav="skills">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="bar-chart-2"></i>
+            <span>Skills</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#resume" data-nav="resume">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="file-text"></i>
+            <span>Resume</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#certifications" data-nav="certifications">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="award"></i>
+            <span>Certifications</span>
+          </a>
+          <a class="flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.03] transition-all group" href="#contact" data-nav="contact">
+            <i class="w-5 h-5 text-neutral-500 group-hover:text-brand-gold transition-colors" data-lucide="mail"></i>
+            <span>Contact</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Sidebar Footer / Social Icons -->
+      <div class="p-6 border-t border-white/[0.04]">
+        <div class="flex items-center gap-2 text-xs text-neutral-400 mb-4 px-1">
+          <i class="w-4 h-4 text-brand-gold" data-lucide="map-pin"></i>
+          <span>Nagpur, Maharashtra, India</span>
+        </div>
+        <div class="flex items-center space-x-4 text-neutral-400 px-1">
+          <a aria-label="GitHub Profile" class="hover:text-brand-gold transition-colors" href="https://github.com/izhaanzia" rel="noopener noreferrer" target="_blank">
+            <i class="w-5 h-5" data-lucide="github"></i>
+          </a>
+          <a aria-label="LinkedIn Profile" class="hover:text-brand-gold transition-colors" href="https://www.linkedin.com/in/izhaanzia" rel="noopener noreferrer" target="_blank">
+            <i class="w-5 h-5" data-lucide="linkedin"></i>
+          </a>
+          <a aria-label="Send Email" class="hover:text-brand-gold transition-colors" href="mailto:izhaanzia@gmail.com">
+            <i class="w-5 h-5" data-lucide="mail"></i>
+          </a>
+          <a aria-label="Download Resume" class="hover:text-brand-gold transition-colors" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
+            <i class="w-5 h-5" data-lucide="download"></i>
+          </a>
+        </div>
+        <p class="text-[11px] text-neutral-500 mt-4 px-1">© <span id="year">2026</span> Izhaan Zia. All rights reserved.</p>
+      </div>
+    </aside>
+
+    <!-- Scrollable Main Content Area -->
+    <main class="flex-1 overflow-y-auto bg-[#141519] flex flex-col justify-between">
+      <div class="p-6 sm:p-10 lg:p-12 space-y-16">
+
+        <!-- HERO SECTION -->
+        <section class="relative flex flex-col lg:flex-row items-center justify-between gap-10 min-h-[460px] pb-10 border-b border-white/[0.05]" id="home">
+          <!-- Hero Left Side: Content & Headline -->
+          <div class="w-full lg:w-3/5 space-y-6 z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-goldLight text-xs tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-ping"></span>
+              <span>Computer Science Engineering · Class of 2028</span>
+            </div>
+            <div>
+              <p class="text-xl md:text-2xl text-neutral-300 font-medium tracking-tight">Hello, I'm</p>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mt-1">
+                Izhaan Zia
+              </h1>
+            </div>
+            <p class="text-base sm:text-lg text-neutral-300 font-normal max-w-xl leading-relaxed">
+              I build modern web experiences, full-stack applications, and workflow automations that solve practical problems. Focused on high-performance interfaces, backend workflows, and robust engineering.
+            </p>
+            <!-- Call to action button -->
+            <div class="pt-2 flex flex-wrap gap-4 items-center">
+              <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-gold hover:bg-brand-goldLight text-[#141519] font-bold text-sm tracking-wide transition-all shadow-lg shadow-brand-gold/20 transform hover:-translate-y-0.5" href="#portfolio">
+                <span>View Projects</span>
+                <i class="w-4 h-4 stroke-[2.5]" data-lucide="chevron-right"></i>
+              </a>
+              <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-neutral-300 hover:text-white font-medium text-sm border border-white/10 transition-all" href="#contact">
+                <span>Get in touch</span>
+              </a>
+              <a class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/[0.02] hover:bg-brand-gold/10 text-brand-goldLight font-medium text-sm border border-brand-gold/30 transition-all" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
+                <i class="w-4 h-4" data-lucide="download"></i>
+                <span>Resume (.PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Side: Monogram Halo Graphic -->
+          <div class="w-full lg:w-2/5 flex items-center justify-center relative">
+            <div class="absolute w-80 h-80 sm:w-96 sm:h-96 hero-glow rounded-full pointer-events-none -z-0"></div>
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center">
+              <!-- Golden Orbit Frame -->
+              <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border border-brand-gold/30 flex items-center justify-center relative shadow-2xl bg-gradient-to-tr from-[#1b1916] via-[#241f17] to-[#121317]">
+                <div class="text-center">
+                  <span class="font-serif text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight gold-gradient-text inline-block">
+                    IZ
+                  </span>
+                  <p class="text-[9px] tracking-[0.25em] text-[#b9a17a] font-semibold uppercase mt-1">Design &amp; Development</p>
+                </div>
+              </div>
+              <!-- Ambient Subtle Badge -->
+              <div class="absolute -bottom-2 sm:bottom-4 z-20 bg-[#121317]/95 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="text-xs font-semibold text-neutral-200">ACET Nagpur · B.Tech CSE</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION -->
+        <section id="portfolio" class="space-y-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-gold">
+                <span>Showcase</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Featured Projects</h2>
+              <p class="text-sm text-neutral-400 mt-1">Web applications, mobile tools, computer vision, and workflow automation</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-gold text-black transition-all" data-filter="all">All</button>
+              <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.08] border border-white/10 transition-all" data-filter="web development">Web development</button>
+              <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.08] border border-white/10 transition-all" data-filter="applications">Applications</button>
+              <button class="project-filter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.08] border border-white/10 transition-all" data-filter="computer vision">Computer vision</button>
+            </div>
+          </div>
+
+          <!-- Project Showcase Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+            <!-- Card 1: Zapex-med -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="web development" data-project="zapex">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Screenshot of Zapex-med study portal" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/zapex-live.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-brand-goldLight">
+                    Web development
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Zapex-med</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">Study Material &amp; Reader Platform</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Searchable subject library with student accounts, protected PDF reader, and admin publishing dashboard with role-based access.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Next.js</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">TypeScript</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Prisma</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Replora CRM & WhatsApp AI Agent -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="applications" data-project="replora">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Replora CRM interface cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-95 group-hover:brightness-100" src="./assets/images/projects/replora.svg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-emerald-400">
+                    Applications
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Replora CRM &amp; AI Agent</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">WhatsApp AI &amp; Follow-up CRM</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Customer relationship platform integrated with a universal WhatsApp AI agent, live webhook dispatch to n8n, chat simulation, and calendar booking.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">n8n</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">WhatsApp API</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Automation</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Nehal & Ariba Wedding Invitation -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="web development" data-project="wedding">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Screenshot of wedding invitation site" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/wedding-live.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-brand-goldLight">
+                    Web development
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Wedding Invitation</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">Interactive Digital Experience</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Responsive wedding invite with animated reveal, live countdown, calendar links, location directions, and validated WhatsApp RSVP integration.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">React</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">TypeScript</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Tailwind</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: MOIL Laptop Reimbursement Application -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="applications" data-project="moil">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Screenshot of MOIL laptop portal" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/moil-live.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-emerald-400">
+                    Applications
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Laptop Portal</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">MOIL Limited · Systems Dept</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Enterprise workflow solution converting organizational laptop reimbursement guidelines into structured approval processes and verification checks.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Workflows</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Testing</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Analysis</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: QuickWA -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="applications" data-project="quickwa">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Screenshot of QuickWA app" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105 filter brightness-95 group-hover:brightness-100" src="./assets/images/projects/quickwa-live.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-emerald-400">
+                    Applications
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">QuickWA Mobile App</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">Flutter &amp; Dart Android Tool</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Lightweight Android utility to start WhatsApp chats without saving numbers. International format validation and themes.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Flutter</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Dart</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">APK Download</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Road Lane Detection -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="computer vision" data-project="lane-detection">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Road lane detection result frame" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/lane-detection-v2.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-cyan-400">
+                    Computer vision
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Road Lane Detection</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">OpenCV &amp; Python Video Processing</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Real-time lane boundary detection applying Gaussian blur, Canny edge detection, region-of-interest masking, and Hough line transforms.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Python</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">OpenCV</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">NumPy</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7: Restaurant Management Application -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="web development" data-project="restaurant">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Restaurant management system cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/restaurant.svg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-brand-goldLight">
+                    Web development
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Restaurant Management</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">Order &amp; Billing Workflow</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Digital solution for managing restaurant orders, menu item availability, table status, and billing invoicing.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">TypeScript</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">React</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">UI/UX</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8: Personal Portfolio Website -->
+            <article class="project-card group bg-[#18191E] border border-white/[0.06] hover:border-brand-gold/40 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 cursor-pointer flex flex-col justify-between" data-category="web development" data-project="portfolio">
+              <div>
+                <div class="aspect-[16/11] bg-neutral-900 overflow-hidden relative">
+                  <img alt="Personal portfolio preview" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100" src="./assets/images/projects/portfolio-live.jpg">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#18191E] via-transparent to-transparent opacity-80"></div>
+                  <span class="absolute top-3 right-3 px-2.5 py-1 text-[11px] font-semibold bg-black/60 backdrop-blur-md rounded-md border border-white/10 text-brand-goldLight">
+                    Web development
+                  </span>
+                </div>
+                <div class="p-5">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-white group-hover:text-brand-goldLight transition-colors">Developer Portfolio</h3>
+                      <p class="text-xs text-neutral-400 mt-0.5">Stitch Desktop Design System</p>
+                    </div>
+                    <div class="p-2 rounded-full bg-white/[0.03] group-hover:bg-brand-gold/20 text-neutral-400 group-hover:text-brand-gold transition-all">
+                      <i class="w-4 h-4" data-lucide="arrow-up-right"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-neutral-400 line-clamp-3 mt-3 leading-relaxed">
+                    Designed and built with an elegant macOS application shell, dark charcoal styling, responsive navigation, and accessible modal views.
+                  </p>
+                </div>
+              </div>
+              <div class="px-5 pb-5">
+                <div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/[0.04] text-[11px] text-neutral-400 font-medium">
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Tailwind CSS</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">JavaScript</span>
+                  <span class="bg-neutral-800/80 px-2 py-0.5 rounded">Responsive</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ABOUT & PROFILE SNAPSHOT SECTION -->
+        <section id="about" class="pt-8 border-t border-white/[0.05] space-y-10">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Bio & Stat Highlights -->
+            <div class="lg:col-span-1 space-y-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Profile Snapshot</span>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Engineering with design precision</h2>
+              <p class="text-sm text-neutral-300 leading-relaxed">
+                I am a Computer Science Engineering student at Anjuman College of Engineering and Technology in Nagpur (Class of 2028). My work bridges frontend interface design, robust full-stack workflows, and automation.
+              </p>
+              <p class="text-sm text-neutral-400 leading-relaxed">
+                Experience includes systems department engineering at MOIL Limited (laptop reimbursement workflows) and responsive web development at ByteUprise.
+              </p>
+              <div class="pt-2 flex items-center gap-3">
+                <div class="text-center px-4 py-3 bg-[#18191E] rounded-xl border border-white/5 flex-1">
+                  <span class="block text-2xl font-extrabold text-white">8+</span>
+                  <span class="text-[11px] text-neutral-400 uppercase">Projects</span>
+                </div>
+                <div class="text-center px-4 py-3 bg-[#18191E] rounded-xl border border-white/5 flex-1">
+                  <span class="block text-2xl font-extrabold text-brand-gold">2028</span>
+                  <span class="text-[11px] text-neutral-400 uppercase">B.Tech CSE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: What I Do (Service Cards) -->
+            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2.5 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-5 h-5" data-lucide="code-2"></i>
+                  </div>
+                  <h3 class="text-sm font-semibold text-white">Web Development</h3>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  Responsive websites and web applications built with modern HTML5, CSS3, JavaScript, TypeScript, React, and Next.js.
+                </p>
+              </div>
+
+              <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2.5 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-5 h-5" data-lucide="smartphone"></i>
+                  </div>
+                  <h3 class="text-sm font-semibold text-white">Application Development</h3>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  Functional application workflows and mobile apps using Spring Boot, Flutter, Dart, and Kotlin based on business needs.
+                </p>
+              </div>
+
+              <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2.5 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-5 h-5" data-lucide="bot"></i>
+                  </div>
+                  <h3 class="text-sm font-semibold text-white">Automation &amp; AI Agents</h3>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  Integrating automated pipelines, n8n workflows, webhook triggers, and conversational WhatsApp AI customer agents.
+                </p>
+              </div>
+
+              <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2.5 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-5 h-5" data-lucide="palette"></i>
+                  </div>
+                  <h3 class="text-sm font-semibold text-white">Frontend &amp; UI Systems</h3>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                  Accessible, user-friendly layouts, cross-browser compatibility, modern design tokens, and clean design system architecture.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS & TOOLKIT SECTION -->
+        <section id="skills" class="pt-8 border-t border-white/[0.05] space-y-8">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-brand-gold">Technical Stack</div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Skills &amp; Toolkit</h2>
+            <p class="text-sm text-neutral-400 mt-1">Technologies, frameworks, and practical capabilities applied across projects</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Languages -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="code"></i>
+                <h3 class="text-sm font-bold text-white">Programming Languages</h3>
+              </div>
+              <p class="text-xs text-neutral-400">C, C++, C#, Python, Java, JavaScript, TypeScript, Dart, Kotlin</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="layout"></i>
+                <h3 class="text-sm font-bold text-white">Web &amp; Frontend</h3>
+              </div>
+              <p class="text-xs text-neutral-400">HTML5, CSS3, Tailwind CSS, React, Next.js, Vite, Responsive Design</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <!-- Applications & Automation -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="cpu"></i>
+                <h3 class="text-sm font-bold text-white">Apps &amp; Automation</h3>
+              </div>
+              <p class="text-xs text-neutral-400">Flutter, Android Studio, Spring Boot, n8n Workflows, Webhooks, WhatsApp AI</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 86%"></div>
+              </div>
+            </div>
+
+            <!-- Cloud & Developer Tools -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="terminal"></i>
+                <h3 class="text-sm font-bold text-white">Cloud &amp; Developer Tools</h3>
+              </div>
+              <p class="text-xs text-neutral-400">Microsoft Azure, AWS, Git, GitHub, VS Code, Chrome DevTools, Vercel</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <!-- Computer Science -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="database"></i>
+                <h3 class="text-sm font-bold text-white">Computer Science Core</h3>
+              </div>
+              <p class="text-xs text-neutral-400">Data Structures &amp; Algorithms, OOP, Debugging, Problem Solving, Database Systems</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <!-- Consulting & Delivery -->
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-3">
+              <div class="flex items-center gap-2.5">
+                <i class="w-5 h-5 text-brand-gold" data-lucide="briefcase"></i>
+                <h3 class="text-sm font-bold text-white">Delivery &amp; Collaboration</h3>
+              </div>
+              <p class="text-xs text-neutral-400">Requirements Analysis, Technical Problem Solving, Stakeholder Collaboration, Git Flow</p>
+              <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-brand-gold h-full rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RESUME & EXPERIENCE SECTION -->
+        <section id="resume" class="pt-8 border-t border-white/[0.05] space-y-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="text-xs font-bold uppercase tracking-wider text-brand-gold">Track Record</div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Experience &amp; Education</h2>
+            </div>
+            <a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.04] hover:bg-brand-gold/20 text-brand-goldLight text-xs font-semibold border border-brand-gold/30 transition-colors self-start sm:self-auto" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
+              <i class="w-4 h-4" data-lucide="download"></i>
+              <span>Download Resume PDF</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Experience Column -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-2.5 text-brand-gold font-bold text-sm tracking-wide">
+                <i class="w-4 h-4" data-lucide="briefcase"></i>
+                <span class="uppercase">Professional Experience</span>
+              </div>
+
+              <!-- Item 1: MOIL -->
+              <div class="relative pl-6 border-l border-white/10 space-y-2">
+                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-brand-gold"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="text-base font-bold text-white">Systems Department Intern</h3>
+                  <span class="text-xs text-brand-goldLight font-medium">Jun 2026 – Present</span>
+                </div>
+                <p class="text-xs font-medium text-neutral-400">MOIL Limited · Nagpur, India</p>
+                <p class="text-xs text-neutral-300 leading-relaxed pt-1">
+                  Contributing to the laptop reimbursement application, translating organizational requirements into structured digital workflows, debugging issues, and aligning functionality with business constraints.
+                </p>
+              </div>
+
+              <!-- Item 2: ByteUprise -->
+              <div class="relative pl-6 border-l border-white/10 space-y-2">
+                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-neutral-600"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="text-base font-bold text-white">Web Development Intern</h3>
+                  <span class="text-xs text-neutral-400 font-medium">Apr 2025 – May 2025</span>
+                </div>
+                <p class="text-xs font-medium text-neutral-400">ByteUprise · Remote</p>
+                <p class="text-xs text-neutral-300 leading-relaxed pt-1">
+                  Engineered responsive web interfaces using HTML, CSS, and JavaScript. Improved frontend performance, resolved UI usability issues, and applied Git-based version control workflows.
+                </p>
+              </div>
+            </div>
+
+            <!-- Education Column -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-2.5 text-brand-gold font-bold text-sm tracking-wide">
+                <i class="w-4 h-4" data-lucide="graduation-cap"></i>
+                <span class="uppercase">Education</span>
+              </div>
+
+              <!-- Degree -->
+              <div class="relative pl-6 border-l border-white/10 space-y-2">
+                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-brand-gold"></span>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="text-base font-bold text-white">B.Tech in Computer Science Engineering</h3>
+                  <span class="text-xs text-brand-goldLight font-medium">2024 – 2028</span>
+                </div>
+                <p class="text-xs font-medium text-neutral-400">Anjuman College of Engineering and Technology · Nagpur</p>
+                <p class="text-xs text-neutral-300 leading-relaxed pt-1">
+                  Pursuing foundational and advanced computer science topics, including algorithms, software engineering, databases, and application systems. Expected graduation in 2028.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="pt-8 border-t border-white/[0.05] space-y-8">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-brand-gold">Credentials</div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Certifications &amp; Training</h2>
+            <p class="text-sm text-neutral-400 mt-1">Practical job simulations, language certifications, and professional training</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-2">
+              <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold w-fit">
+                <i class="w-4 h-4" data-lucide="award"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white">Python Programming</h3>
+              <p class="text-xs text-brand-goldLight">Bits Code · Feb – Mar 2025</p>
+              <p class="text-xs text-neutral-400">Core and advanced Python language constructs and problem-solving.</p>
+            </div>
+
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-2">
+              <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold w-fit">
+                <i class="w-4 h-4" data-lucide="award"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white">C/C++ Programming</h3>
+              <p class="text-xs text-brand-goldLight">Udemy · Jan 2025</p>
+              <p class="text-xs text-neutral-400">Data structures, memory management, and OOP in C and C++.</p>
+            </div>
+
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-2">
+              <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold w-fit">
+                <i class="w-4 h-4" data-lucide="award"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white">Goldman Sachs SWE Simulation</h3>
+              <p class="text-xs text-brand-goldLight">Forage · Nov 2024</p>
+              <p class="text-xs text-neutral-400">Software engineering simulation covering cryptographic security and data handling.</p>
+            </div>
+
+            <div class="p-5 bg-[#18191E] border border-white/5 rounded-xl hover:border-brand-gold/30 transition-colors space-y-2">
+              <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold w-fit">
+                <i class="w-4 h-4" data-lucide="award"></i>
+              </div>
+              <h3 class="text-sm font-bold text-white">Advanced HTML</h3>
+              <p class="text-xs text-brand-goldLight">UpGrad · Sep – Dec 2024</p>
+              <p class="text-xs text-neutral-400">Semantic markup, responsive layouts, forms, and web accessibility standards.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT BANNER & FORM SECTION -->
+        <section id="contact" class="space-y-8">
+          <!-- CTA Banner -->
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#1A1B22] via-[#16171D] to-[#121317] border border-brand-gold/30 p-8 sm:p-10">
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div class="space-y-2 text-center md:text-left">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Let's build something useful</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white">Have a project or opportunity?</h3>
+                <p class="text-sm text-neutral-300 max-w-lg">I am open to software development internships, freelance collaborations, and tech consulting initiatives.</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <a class="px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldLight text-[#111215] font-bold text-sm tracking-wide transition-all shadow-md transform hover:-translate-y-0.5" href="mailto:izhaanzia@gmail.com">
+                  Say Hello
+                </a>
+                <a class="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-300 font-medium text-sm border border-white/10 transition-colors" href="./assets/resume/Izhaan-Zia-Resume.pdf" download>
+                  Resume (.PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form & Connection Links -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4">
+            <!-- Connect Info -->
+            <div class="lg:col-span-1 space-y-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Get in touch</span>
+              <h3 class="text-2xl font-bold text-white">Let’s connect</h3>
+              <p class="text-sm text-neutral-300 leading-relaxed">
+                Reach out by email, phone, or LinkedIn. I am always happy to talk about new projects, technical ideas, and development opportunities.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <a href="mailto:izhaanzia@gmail.com" class="flex items-center gap-3 p-3.5 rounded-xl bg-[#18191E] border border-white/5 hover:border-brand-gold/40 text-neutral-300 hover:text-white transition-all">
+                  <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-4 h-4" data-lucide="mail"></i>
+                  </div>
+                  <div>
+                    <p class="text-[11px] text-neutral-400 uppercase font-semibold">Email</p>
+                    <p class="text-xs font-medium">izhaanzia@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="tel:+919552997786" class="flex items-center gap-3 p-3.5 rounded-xl bg-[#18191E] border border-white/5 hover:border-brand-gold/40 text-neutral-300 hover:text-white transition-all">
+                  <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-4 h-4" data-lucide="phone"></i>
+                  </div>
+                  <div>
+                    <p class="text-[11px] text-neutral-400 uppercase font-semibold">Phone</p>
+                    <p class="text-xs font-medium">+91 95529 97786</p>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/izhaanzia" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-xl bg-[#18191E] border border-white/5 hover:border-brand-gold/40 text-neutral-300 hover:text-white transition-all">
+                  <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-4 h-4" data-lucide="linkedin"></i>
+                  </div>
+                  <div>
+                    <p class="text-[11px] text-neutral-400 uppercase font-semibold">LinkedIn</p>
+                    <p class="text-xs font-medium">linkedin.com/in/izhaanzia</p>
+                  </div>
+                </a>
+
+                <a href="https://github.com/izhaanzia" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-xl bg-[#18191E] border border-white/5 hover:border-brand-gold/40 text-neutral-300 hover:text-white transition-all">
+                  <div class="p-2 rounded-lg bg-brand-gold/10 text-brand-gold">
+                    <i class="w-4 h-4" data-lucide="github"></i>
+                  </div>
+                  <div>
+                    <p class="text-[11px] text-neutral-400 uppercase font-semibold">GitHub</p>
+                    <p class="text-xs font-medium">github.com/izhaanzia</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-2 bg-[#18191E] border border-white/5 rounded-2xl p-6 sm:p-8 space-y-5">
+              <div>
+                <h4 class="text-lg font-bold text-white">Write a message</h4>
+                <p class="text-xs text-neutral-400 mt-1">Submitting this form prepares an email draft addressed directly to me.</p>
+              </div>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="fullname" class="text-xs font-semibold text-neutral-300">Your Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3 bg-[#121317] border border-white/10 rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="email" class="text-xs font-semibold text-neutral-300">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com" class="w-full px-4 py-3 bg-[#121317] border border-white/10 rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all">
+                  </div>
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="message" class="text-xs font-semibold text-neutral-300">Your Message</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, idea, or questions..." class="w-full px-4 py-3 bg-[#121317] border border-white/10 rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-y"></textarea>
+                </div>
+
+                <button type="submit" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldLight text-[#111215] font-bold text-xs tracking-wide transition-all shadow-md w-full sm:w-auto">
+                  <i class="w-4 h-4" data-lucide="send"></i>
+                  <span>Open Email Draft</span>
+                </button>
+
+                <p id="form-status" class="text-xs text-brand-goldLight font-medium pt-1 hidden"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Page Footer -->
+      <footer class="py-5 px-8 border-t border-white/[0.04] bg-[#0E0F12] flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <div>Designed with Stitch · Engineered with HTML5, Tailwind CSS &amp; JavaScript</div>
+        <div class="flex items-center space-x-6">
+          <a class="hover:text-brand-gold transition-colors" href="#home">Back to top ↑</a>
+          <span>•</span>
+          <span>Nagpur, Maharashtra, India</span>
+        </div>
+      </footer>
+    </main>
+
+  </div>
+</div>
+
+<!-- Interactive Project Dialog (Modal) -->
+<dialog id="project-dialog" class="w-full max-w-2xl bg-[#18191E] border border-white/10 rounded-2xl shadow-2xl p-0 text-neutral-300 backdrop:bg-black/80">
+  <div class="relative p-6 sm:p-8 space-y-5">
+    <button id="dialog-close-btn" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-neutral-400 hover:text-white transition-colors" aria-label="Close dialog">
+      <i class="w-5 h-5" data-lucide="x"></i>
+    </button>
+    <div id="dialog-content" class="space-y-4">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+</dialog>
+
+<!-- Interactive Scripts -->
+<script>
+  // Project Database for Dialog Details
+  const projectDatabase = {
+    'zapex': {
+      title: 'Zapex-med',
+      subtitle: 'Study Material Portal & Protected Reader',
+      category: 'Web development',
+      cover: './assets/images/projects/zapex-live.jpg',
+      description: 'Zapex-med is a comprehensive educational resource platform built for medical students. It includes a searchable subject library, organized topic categories, secure user accounts, and a protected document reader preventing unauthorized content extraction. The administrative dashboard allows verified publishers to upload materials, create structured courses, track user access, and configure granular permissions.',
+      stack: 'Next.js · React · TypeScript · Tailwind CSS · PostgreSQL · Prisma · Cloudflare R2',
+      links: [
+        { label: 'Visit Live Site', url: 'https://zapex-med.vercel.app', icon: 'external-link' }
+      ]
+    },
+    'replora': {
+      title: 'Replora CRM & WhatsApp AI Agent',
+      subtitle: 'Customer Engagement & Follow-up Platform',
+      category: 'Applications & Automation',
+      cover: './assets/images/projects/replora.svg',
+      description: 'Replora CRM connects incoming leads with intelligent conversational workflows. Built with live webhook dispatch to n8n automation pipelines, it features real-time chat simulation, lead lifecycle kanban tracking, consultation appointment scheduling synced to Google Calendar, and automated quotation reminders to maximize sales conversion.',
+      stack: 'JavaScript · HTML5 · CSS3 · n8n Workflows · WhatsApp Webhook API · Automation',
+      links: []
+    },
+    'wedding': {
+      title: 'Nehal & Ariba Wedding Invitation',
+      subtitle: 'Interactive Digital Wedding Experience',
+      category: 'Web development',
+      cover: './assets/images/projects/wedding-live.jpg',
+      description: 'A responsive digital wedding invitation featuring an animated curtain-opening sequence, live countdown timer to each ceremony, interactive photo gallery, calendar addition links, and integrated Google Maps directions. Includes an interactive RSVP form that validates attendee selections and pre-formats a customized WhatsApp response message.',
+      stack: 'React · TypeScript · Vite · Tailwind CSS · Responsive UX',
+      links: [
+        { label: 'Visit Wedding Website', url: 'https://nehal-ariba-wedding.vercel.app', icon: 'external-link' }
+      ]
+    },
+    'moil': {
+      title: 'Laptop Reimbursement Application',
+      subtitle: 'Enterprise IT Workflow Automation',
+      category: 'Applications',
+      cover: './assets/images/projects/moil-live.jpg',
+      description: 'Developed during my Systems Department internship at MOIL Limited. Translates complex organizational IT hardware reimbursement policies into clean, intuitive digital workflows. Includes role-based claim submissions, automated eligibility verification, document verification pipelines, and stakeholder approval tracking.',
+      stack: 'Requirements Analysis · Application Workflows · Testing · Enterprise IT',
+      links: []
+    },
+    'quickwa': {
+      title: 'QuickWA Mobile App',
+      subtitle: 'Direct WhatsApp Messaging Without Contacts',
+      category: 'Applications',
+      cover: './assets/images/projects/quickwa-live.jpg',
+      description: 'QuickWA is a clean, privacy-respecting Android utility developed in Flutter. It allows users to initiate WhatsApp and WhatsApp Business chats without cluttering their device address book. Features international dialing code auto-selection, number clipboard auto-detection, pre-filled text templates, and adaptive dark mode.',
+      stack: 'Flutter · Dart · WhatsApp Deep Linking · Android SDK',
+      links: [
+        { label: 'Download APK (v1.0.0)', url: './assets/downloads/QuickWA-1.0.0.apk', icon: 'download', download: true },
+        { label: 'View on GitHub', url: 'https://github.com/izhaanzia', icon: 'github' }
+      ]
+    },
+    'lane-detection': {
+      title: 'Road Lane Detection',
+      subtitle: 'Computer Vision Driving Safety Pipeline',
+      category: 'Computer vision',
+      cover: './assets/images/projects/lane-detection-v2.jpg',
+      description: 'An applied computer vision experiment engineered to detect and track highway lane markings in driving footage. The pipeline applies grayscale conversion, Gaussian smoothing blur, Canny edge detection, a trapezoidal region-of-interest mask, and probabilistic Hough line transforms to compute and overlay mathematical lane boundary estimations onto video frames.',
+      stack: 'Python · OpenCV · NumPy · Image Processing Algorithms',
+      links: []
+    },
+    'restaurant': {
+      title: 'Restaurant Management Application',
+      subtitle: 'Point-of-Sale & Kitchen Order Tracking',
+      category: 'Web development',
+      cover: './assets/images/projects/restaurant.svg',
+      description: 'A responsive web application developed to coordinate dining orders, menu pricing, table availability, and billing. Features real-time kitchen order dispatch, customizable menu items, and split-bill calculation designed to streamline restaurant staff workflows.',
+      stack: 'TypeScript · React · HTML5 · CSS3',
+      links: []
+    },
+    'portfolio': {
+      title: 'Developer Portfolio Website',
+      subtitle: 'Stitch macOS Desktop Design System',
+      category: 'Web development',
+      cover: './assets/images/projects/portfolio-live.jpg',
+      description: 'The personal developer portfolio you are viewing right now! Crafted with a macOS application shell aesthetic inspired by Stitch, combining Plus Jakarta Sans typography with Cinzel serif branding, gold-accented dark mode styling, accessible modal dialogs, and responsive mobile architecture.',
+      stack: 'HTML5 · Tailwind CSS · JavaScript · Lucide Icons',
+      links: [
+        { label: 'View Repository on GitHub', url: 'https://github.com/izhaanzia/portfolio-v2', icon: 'github' }
+      ]
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // Set dynamic current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Project Category Filtering
+    const filterButtons = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active button state
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-brand-gold', 'text-black');
+          b.classList.add('bg-white/[0.04]', 'text-neutral-300');
+        });
+        btn.classList.add('bg-brand-gold', 'text-black');
+        btn.classList.remove('bg-white/[0.04]', 'text-neutral-300');
+
+        // Filter projects
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Project Dialog Interactions
+    const dialog = document.getElementById('project-dialog');
+    const dialogContent = document.getElementById('dialog-content');
+    const dialogCloseBtn = document.getElementById('dialog-close-btn');
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const projectKey = card.getAttribute('data-project');
+        const data = projectDatabase[projectKey];
+        if (!data) return;
+
+        let linksHtml = '';
+        if (data.links && data.links.length > 0) {
+          linksHtml = '<div class="flex flex-wrap gap-3 pt-3">';
+          data.links.forEach(link => {
+            const downloadAttr = link.download ? 'download' : '';
+            linksHtml += `
+              <a href="${link.url}" target="_blank" rel="noopener noreferrer" ${downloadAttr} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldLight text-[#111215] font-bold text-xs tracking-wide transition-all shadow-md">
+                <i class="w-4 h-4" data-lucide="${link.icon || 'external-link'}"></i>
+                <span>${link.label}</span>
+              </a>
+            `;
+          });
+          linksHtml += '</div>';
+        }
+
+        dialogContent.innerHTML = `
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-neutral-900 border border-white/10">
+            <img src="${data.cover}" alt="${data.title}" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">${data.category}</span>
+            <h3 class="text-2xl font-bold text-white mt-1">${data.title}</h3>
+            <p class="text-xs text-neutral-400 mt-0.5">${data.subtitle}</p>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed">${data.description}</p>
+          <div class="pt-2 border-t border-white/5">
+            <p class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1">Tech Stack</p>
+            <p class="text-xs text-brand-goldLight font-medium">${data.stack}</p>
+          </div>
+          ${linksHtml}
+        `;
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        dialog.showModal();
+      });
+    });
+
+    dialogCloseBtn.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+
+    // Navigation Active Link Highlight on Scroll
+    const navLinks = document.querySelectorAll('#nav-container a');
+    const sections = ['home', 'portfolio', 'about', 'skills', 'resume', 'certifications', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        const linkNav = link.getAttribute('data-nav');
+        if (linkNav === current) {
+          link.classList.add('nav-active-item');
+          link.classList.remove('text-neutral-400');
+          const icon = link.querySelector('i');
+          if (icon) {
+            icon.classList.remove('text-neutral-500');
+            icon.classList.add('text-brand-gold');
+          }
+        } else {
+          link.classList.remove('nav-active-item');
+          link.classList.add('text-neutral-400');
+          const icon = link.querySelector('i');
+          if (icon) {
+            icon.classList.remove('text-brand-gold');
+            icon.classList.add('text-neutral-500');
+          }
+        }
+      });
+    });
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const subject = encodeURIComponent(`Portfolio inquiry from ${fullname}`);
+        const body = encodeURIComponent(`${message}\n\nFrom: ${fullname}\nEmail: ${email}`);
+
+        window.location.href = `mailto:izhaanzia@gmail.com?subject=${subject}&body=${body}`;
+
+        formStatus.textContent = 'Opening your email client draft addressed to izhaanzia@gmail.com...';
+        formStatus.classList.remove('hidden');
+      });
+    }
+  });
 </script>
 </body>
 </html>
