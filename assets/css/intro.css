@@ -13,3 +13,6 @@
 @keyframes entry-icon-pulse{50%{transform:scale(1.1)}}@keyframes entry-code-glow{to{text-shadow:0 0 6px #00ff0080}}@keyframes entry-scanline{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
 @media(max-height:650px){.entry-caption{top:auto;bottom:24px}.intro-skip{top:12px;right:16px}.entry-editor{padding-block:10px}.entry-line-numbers span,.entry-code-content code>span{line-height:14px}.entry-code-content code{line-height:14px}}
 @media(prefers-reduced-motion:reduce){.entry-intro{display:none!important}.intro-pending .portfolio-shell,.intro-pending .floating-nav{visibility:visible}.intro-pending{overflow:auto}}
+
+/* The ID is the only content revealed before the entrance finishes. */
+.intro-pending.intro-reveal-profile .identity-card > :not(.lanyard-frame){visibility:hidden}

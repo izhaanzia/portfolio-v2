@@ -9,3 +9,5 @@ Verified: desktop phases opening → docking → revealing → complete with no 
 Published to production: https://portfolio-v2-silk-beta.vercel.app/ — deployment dpl_4jLbuS8dTsnHuffZwZFmb4DgE1FF. Live first entry presents the introduction, completes the reveal, leaves the site visible, loads no glass stylesheet, and reports no browser errors. Both pages and intro assets return HTTP 200.
 
 Journey-refresh fix: removed the home-only intro restriction. Deferred initial section scrolling until the intro completes (or Skip is used), keeping the code tile’s landing target at the visible profile location. Verified #resume refresh reaches opening → docking → revealing → complete, then returns to heading top 120px with milestone 1/4. Skip also restores #resume.
+
+Home entrance: code card → spin and dock → ID-only reveal → 1.4 second pause → navigation, content and profile links fade in. Returning from the separate résumé page to Home also runs this entrance. Non-Home anchors retain their destination and use a shorter reveal pause. Reduced motion and Skip intro bypass the sequence.

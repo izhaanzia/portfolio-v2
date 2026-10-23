@@ -19,7 +19,7 @@
   animations.forEach(animation=>animation.cancel());animations.clear();
   root.classList.remove('intro-pending','intro-reveal-profile');overlay.remove();
   window.removeEventListener('portfolio-intro-skip',skip);window.removeEventListener('resize',resize);document.removeEventListener('keydown',escape);motion.removeEventListener('change',reduce);
-  if(reveal&&!motion.matches){document.querySelectorAll('.floating-nav,main').forEach(element=>element.animate([{opacity:0},{opacity:1}],{duration:650,easing:'ease-out'}));}
+  if(reveal&&!motion.matches){document.querySelectorAll('.floating-nav,main,.identity-socials,.profile-resume-link,.identity-location').forEach(element=>element.animate([{opacity:0},{opacity:1}],{duration:650,easing:'ease-out'}));}
   window.dispatchEvent(new Event('resize'));
   window.ScrollTrigger?.refresh();
   window.dispatchEvent(new Event('portfolio-intro-complete'));
@@ -56,7 +56,14 @@
    await play(tile,[{transform:'translate3d(0,0,0) rotateY(0deg) rotateZ(0deg) scale(1)'},{transform:`translate3d(${x*.24}px,${y*.12}px,0) rotateY(-180deg) rotateZ(-5deg) scale(.9)`,offset:.38},{transform:`translate3d(${x}px,${y}px,0) rotateY(-360deg) rotateZ(0deg) scale(${sx},${sy})`}],{duration:1050,easing:'cubic-bezier(.65,0,.2,1)',fill:'forwards'});
    if(finished)return;
    root.classList.add('intro-reveal-profile');root.dataset.introState='revealing';
-   await Promise.all([play(profile,[{opacity:0},{opacity:1}],{duration:450,easing:'ease-out',fill:'forwards'}),play(tile,[{opacity:1},{opacity:0}],{duration:420,easing:'ease-out',fill:'forwards'})]);
+   const badge=document.querySelector('.lanyard-canvas')||profile.querySelector('.lanyard-frame')||profile;
+   await Promise.all([play(badge,[{opacity:0},{opacity:1}],{duration:500,easing:'ease-out',fill:'forwards'}),play(tile,[{opacity:1},{opacity:0}],{duration:420,easing:'ease-out',fill:'forwards'})]);
+   if(finished)return;
+   root.dataset.introState='card-only';
+   // Let the hanging ID stand alone before introducing the rest of Home.
+   const homeEntry=!anchor||anchor==='home'||anchor==='top';
+   await wait(homeEntry?1400:250);
+   if(finished)return;
    finish(true);
   }catch(error){console.warn('Portfolio intro skipped:',error);finish(false);}
  })();
