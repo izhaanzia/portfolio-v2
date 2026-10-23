@@ -1,0 +1,33 @@
+/* Project-card adaptation of the supplied TiltCard reference by Léo. */
+#portfolio .project-list{gap:24px}
+#portfolio .project-row{position:relative;min-width:0;perspective:1000px;background:none;border:0;box-shadow:none}
+#portfolio .project-row:hover{background:none}
+#portfolio .project-open{position:relative;display:block;isolation:isolate;width:100%;height:280px;padding:26px 28px;text-align:left;overflow:hidden;border:1px solid #ffffff1a;border-radius:18px;background:linear-gradient(120deg,#27211c,#1d1a17 65%);box-shadow:inset 0 1px 0 #ffffff09,0 10px 28px #0002;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transform-origin:center;transition:border-color .25s,box-shadow .25s;color:#f7f3ee}
+#portfolio .project-open:hover,#portfolio .project-open:focus-visible{border-color:#e8a16d77;box-shadow:inset 0 1px 0 #ffffff15,0 18px 44px #0004}
+#portfolio .project-open:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 80% 110% at var(--shine-x,50%) var(--shine-y,20%),#ffffff20,transparent 68%);opacity:0;clip-path:circle(0% at var(--shine-x,50%) var(--shine-y,20%));transition:opacity .35s,clip-path .6s cubic-bezier(.2,.65,.25,1)}
+#portfolio .project-open:hover:before,#portfolio .project-open:focus-visible:before{opacity:1;clip-path:circle(140% at var(--shine-x,50%) var(--shine-y,20%))}
+#portfolio .tilt-copy{position:absolute;top:26px;left:28px;z-index:2;display:block;width:53%;max-width:335px;pointer-events:none}
+#portfolio .tilt-badge{display:inline-flex;align-items:stretch;margin-bottom:19px;border:1px solid #ffffff20;border-radius:100px;overflow:hidden;font-size:10px;font-weight:500;line-height:1.2;max-width:100%;white-space:nowrap}
+.tilt-badge>span{padding:7px 10px;background:#151310;color:#d0c7bf}.tilt-badge>.tilt-badge-lime{background:#d5ff60;color:#222916}.tilt-badge>.tilt-badge-orange{background:#e8a16d;color:#291a11}
+#portfolio .project-open strong{display:block;font-size:25px;font-weight:600;line-height:1.24;letter-spacing:-.8px;overflow-wrap:normal}
+#portfolio .project-open small{display:block;color:#b4aaa1;font-size:13px;line-height:1.5;margin-top:11px;max-width:250px}
+#portfolio .tilt-view{display:inline-flex;align-items:center;gap:18px;margin-top:20px;color:#e8ae87;font-size:11px;font-weight:500}.tilt-view>span{font-size:18px}
+#portfolio .tilt-preview{position:absolute;z-index:1;width:49%;height:74%;right:-25px;bottom:-18px;pointer-events:none;transform:rotate(-5deg);transform-origin:50% 80%;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+#portfolio .tilt-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:11px;border:1px solid #ffffff3b;box-shadow:0 14px 32px #0008}
+#portfolio .tilt-corner{position:absolute;right:22px;top:20px;color:#c89877;font-size:23px;z-index:2;pointer-events:none}
+#portfolio .apk-link{position:absolute;z-index:3;left:28px;bottom:22px;margin:0;padding:0 12px;min-height:36px;border:1px solid #d5ff6040;border-radius:7px;background:#20251a;color:#d5ff60;font-size:10px;max-width:55%;box-shadow:0 4px 14px #0003}
+#portfolio .project-row:has(.apk-link) .tilt-view{margin-top:14px}
+@media(hover:hover) and (pointer:fine){#portfolio .project-row.is-tilting .tilt-preview{transform:translateY(-8px) rotate(-3deg)}}
+@media(max-width:1150px){#portfolio .project-open{height:290px;padding:24px}#portfolio .project-open strong{font-size:22px}#portfolio .tilt-badge{font-size:9px}.tilt-badge>span{padding:7px 8px}#portfolio .tilt-copy{width:57%}#portfolio .tilt-preview{width:46%;height:65%;right:-26px;bottom:-10px}}
+@media(max-width:620px){#portfolio .project-list{gap:20px}#portfolio .project-open{height:300px;padding:22px}#portfolio .project-open strong{font-size:21px;line-height:1.23}#portfolio .project-open small{font-size:12px;line-height:1.5;max-width:170px}#portfolio .tilt-copy{width:58%}#portfolio .tilt-badge{font-size:8px;margin-bottom:18px;max-width:calc(100% + 44px)}.tilt-badge>span{padding:7px 8px}#portfolio .tilt-preview{width:48%;height:54%;right:-24px;bottom:-8px}#portfolio .tilt-corner{top:18px;right:18px;font-size:20px}#portfolio .tilt-view{font-size:10px;margin-top:16px;gap:12px}#portfolio .apk-link{left:22px;bottom:20px;font-size:9px;max-width:60%;padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){#portfolio .project-open{transform:none!important}#portfolio .tilt-preview{transition:none!important}#portfolio .project-open:before{transition:none}#portfolio .project-row.is-tilting .tilt-preview{transform:rotate(-5deg)}}
+
+@media(max-width:1150px){#portfolio .tilt-copy{top:24px;left:24px}}
+@media(max-width:620px){#portfolio .tilt-copy{top:22px;left:22px;width:calc(100% - 44px);max-width:none}#portfolio .project-open strong{max-width:88%}#portfolio .project-open small{max-width:62%}#portfolio .tilt-view{position:absolute;top:210px;left:0}#portfolio .project-row:has(.apk-link) .tilt-view{top:165px}#portfolio .tilt-preview{height:42%;width:50%}}
+
+/* The backdrop eases with the detail panel, including Escape and outside clicks. */
+[data-dialog][open]::backdrop{animation:project-backdrop-in 460ms cubic-bezier(.16,1,.3,1) both}
+[data-dialog][data-closing]::backdrop{animation:project-backdrop-out 220ms ease-in both}
+@keyframes project-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes project-backdrop-out{from{opacity:1}to{opacity:0}}
+@media(prefers-reduced-motion:reduce){[data-dialog]::backdrop{animation:none!important}}

@@ -1,0 +1,166 @@
+.accordion-gallery {
+  --ag-accent: #ffffff;
+  --ag-overlay: #060010;
+  --ag-text: #ffffff;
+  --ag-gap: 10px;
+  --ag-radius: 16px;
+  --ag-media-size: 320px;
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--ag-gap);
+  width: 100%;
+  max-width: 100%;
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.accordion-gallery--vertical {
+  flex-direction: column;
+}
+
+.ag-panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--ag-radius);
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  background: #0a0713;
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.8);
+  will-change: flex-grow, transform;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ag-panel:focus-visible {
+  box-shadow:
+    0 0 0 2px var(--ag-accent),
+    0 10px 30px -18px rgba(0, 0, 0, 0.8);
+}
+
+.ag-panel__frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.ag-panel__media {
+  --ag-gray: 1;
+  --ag-dim: 0.35;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--ag-media-size);
+  height: 100%;
+  filter: grayscale(var(--ag-gray));
+  will-change: transform, filter;
+}
+
+.accordion-gallery--vertical .ag-panel__media {
+  width: 100%;
+  height: var(--ag-media-size);
+}
+
+.ag-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.ag-panel__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 45%, color-mix(in srgb, var(--ag-overlay) 78%, transparent) 100%),
+    color-mix(in srgb, var(--ag-overlay) calc(var(--ag-dim, 0.35) * 100%), transparent);
+}
+
+.ag-panel__label {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ag-panel__bar {
+  flex: 0 0 auto;
+  width: 3px;
+  height: 26px;
+  border-radius: 3px;
+  background: var(--ag-accent);
+  opacity: 0;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--ag-accent) 60%, transparent);
+}
+
+.ag-panel__text {
+  color: var(--ag-text);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 520px) {
+  .accordion-gallery {
+    flex-direction: column;
+    perspective: none;
+    height: auto !important;
+  }
+  .ag-panel {
+    min-height: 84px;
+    transform: none !important;
+  }
+  .accordion-gallery .ag-panel__media {
+    width: 100%;
+    height: var(--ag-media-size);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-panel,
+  .ag-panel__media {
+    will-change: auto;
+  }
+}
+
+/* Portfolio adaptation: warm accents, readable project labels, touch layout. */
+.project-accordion{margin-bottom:30px;min-width:0}.project-accordion .accordion-gallery{--ag-accent:#e8a16d;--ag-overlay:#151312;--ag-text:#fff;--ag-gap:10px;--ag-radius:14px;height:420px}
+.project-accordion .ag-panel{padding:0;border:1px solid #ffffff16;background:#211c18;font:inherit;text-align:left;color:#fff}
+.project-accordion .ag-panel--active{border-color:#e8a16d66}
+.project-accordion .ag-panel__media{width:var(--ag-media-size);transform:translate(-50%,-50%)}
+.project-accordion .ag-panel__overlay{background:linear-gradient(180deg,#15131220 25%,#15131266 65%,#151312e8 100%);opacity:.9}
+.project-accordion .ag-panel:not(.ag-panel--active) .ag-panel__overlay{background:#15131288}
+.project-accordion .ag-panel__text{font-size:18px;white-space:normal;line-height:1.25;text-wrap:balance}
+.ag-panel__number{position:absolute;top:16px;left:16px;font-size:11px;color:#fff9;z-index:2;text-shadow:0 2px 10px #000}
+.ag-panel--active .ag-panel__number{color:#e8a16d}
+.accordion-source{display:none!important}.ag-project-meta{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:24px;min-height:72px}.ag-project-copy{min-width:0}.ag-project-copy strong{display:block;font-size:19px;line-height:1.4;font-weight:500;letter-spacing:-.5px}.ag-project-copy small{display:block;font-size:12px;color:#b4aaa1;margin-top:6px}.ag-project-actions{display:flex;flex-wrap:wrap;gap:10px;flex-shrink:0}.ag-details,.ag-apk{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:44px;padding:10px 16px;border:0;border-radius:8px;font-size:11px;font-weight:500;background:#e8a16d;color:#211810}.ag-apk{background:#d5ff60;color:#252c17}.ag-apk[hidden]{display:none}.ag-hint{color:#a69b92;font-size:11px;line-height:1.5;margin:14px 0 0}
+@media(max-width:1150px){.ag-project-meta{align-items:flex-start;flex-direction:column;gap:15px}.project-accordion .accordion-gallery{height:400px}}
+@media(max-width:620px){.project-accordion .accordion-gallery{flex-direction:column;height:570px!important;perspective:none}.project-accordion[data-mini] .accordion-gallery{height:480px!important}.project-accordion .ag-panel{min-height:72px;transform:none!important}.project-accordion .ag-panel__media{width:100%;height:var(--ag-media-size)}.project-accordion .ag-panel__label{left:18px;right:18px;bottom:16px}.project-accordion .ag-panel__text{font-size:17px}.project-accordion .ag-panel:not(.ag-panel--active) .ag-panel__text{font-size:11px;opacity:.85!important;white-space:nowrap;transform:none!important}.project-accordion .ag-panel:not(.ag-panel--active) .ag-panel__bar{display:none}.ag-project-copy strong{font-size:18px}.ag-hint{font-size:10px}}
+
+.project-accordion .ag-panel__media img{object-fit:contain;background:#201b17}.ag-panel__number{padding:4px 6px;border-radius:4px;background:#151312a6}
+
+/* Square studio artwork fills every expanding panel without letterboxing. */
+.project-accordion .ag-panel__media img{object-fit:cover}
+.project-accordion .ag-panel__overlay{background:linear-gradient(180deg,transparent 45%,#151312b8 100%);opacity:1}
+.project-accordion .ag-panel:not(.ag-panel--active) .ag-panel__overlay{background:#15131280}

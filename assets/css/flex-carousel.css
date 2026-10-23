@@ -1,0 +1,144 @@
+.flex-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: contain;
+  outline: none;
+}
+
+.flex-carousel[data-hover='open'] {
+  cursor: zoom-in;
+}
+
+.flex-carousel[data-hover='close'] {
+  cursor: zoom-out;
+}
+
+.flex-carousel[data-dragging] {
+  cursor: grabbing;
+}
+
+.flex-carousel:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(128, 128, 140, 0.55);
+}
+
+.flex-carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% + var(--flex-carousel-half) * var(--flex-carousel-lift, 1) + 22px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  pointer-events: none;
+  text-align: center;
+  animation: flex-carousel-reveal 900ms ease both;
+}
+
+.flex-carousel__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  animation: flex-carousel-title 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flex-carousel__subtitle {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.flex-carousel__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.5;
+  transition: opacity 400ms ease;
+}
+
+.flex-carousel__count[data-hidden] {
+  opacity: 0;
+}
+
+.flex-carousel__digits {
+  display: inline-flex;
+}
+
+.flex-carousel__digit {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.flex-carousel__reel {
+  display: flex;
+  flex-direction: column;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flex-carousel__reel span {
+  height: 1em;
+}
+
+.flex-carousel__slash {
+  opacity: 0.6;
+}
+
+.flex-carousel__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes flex-carousel-title {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flex-carousel-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flex-carousel__caption,
+  .flex-carousel__title {
+    animation: none;
+  }
+
+  .flex-carousel__reel {
+    transition: none;
+  }
+}
+
+.project-carousel-shell{margin:0 0 24px;min-width:0}.project-carousel-shell .flex-carousel{height:560px;--flex-carousel-half:25%;border-block:1px solid #ffffff0c}.carousel-source{display:none!important}.flex-carousel__title{font-size:20px;color:#f7f3ee;letter-spacing:-.5px}.flex-carousel__subtitle{font-size:12px;color:#c2b5aa}.flex-carousel__count{color:#e8a16d;opacity:1;margin-top:6px}.flex-carousel:focus-visible{box-shadow:inset 0 0 0 2px #e8a16d}.carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px}.carousel-controls button{width:44px;height:44px;border:1px solid #e8a16d55;border-radius:50%;color:#e8a16d;background:#211c18;font-size:23px;transition:background .2s}.carousel-controls button:hover{background:#3c2a1d}.carousel-hint{font-size:11px;color:#b4aaa1}.carousel-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin-top:20px}.carousel-details,.carousel-apk{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:44px;padding:10px 18px;border-radius:8px;background:#e8a16d;color:#211810;font-size:12px;font-weight:500;border:0}.carousel-apk{background:#d5ff60;color:#252c17}.carousel-apk[hidden]{display:none}.is-focused .flex-carousel__caption{opacity:0}.flex-carousel__caption{transition:opacity .3s}.project-carousel-shell .flex-carousel__live{position:absolute}.project-carousel-shell .flex-carousel:before{content:none}@media(max-width:620px){.project-carousel-shell .flex-carousel{height:430px}.flex-carousel__title{font-size:18px}.flex-carousel__subtitle{font-size:11px}.carousel-hint{font-size:10px}.carousel-actions{gap:10px}.carousel-details,.carousel-apk{font-size:11px}}

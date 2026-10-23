@@ -1,0 +1,9 @@
+.env*
+.claude/
+.github/
+design-reference/
+website-demo-image/
+index.txt
+README.md
+AGENTS.md
+assets/images/projects/*-theme-v3.png

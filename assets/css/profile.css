@@ -1,0 +1,42 @@
+/* A contained portrait keeps the original photograph fully framed at every width. */
+.main-content .home-section { gap:40px; justify-content:space-between; padding-block:44px; min-height:460px; background:radial-gradient(ellipse at 85% 45%,#b68b3620,transparent 55%),#1c1c19; }
+.home-section .hero-copy { width:52%; }
+.home-section .hero-portrait { position:relative; inset:auto; z-index:2; pointer-events:auto; flex:0 1 330px; width:42%; height:auto; }
+.home-section .hero-portrait::after { display:none; }
+.profile-card { --profile-radius:20px; position:relative; display:block; width:100%; height:370px; padding:0; border:0; background:transparent; color:#eeeae3; text-align:left; cursor:pointer; perspective:1200px; border-radius:var(--profile-radius); -webkit-tap-highlight-color:transparent; }
+.profile-card:focus-visible { outline:2px solid #eed19a; outline-offset:6px; }
+.profile-card-inner { position:relative; display:block; width:100%; height:100%; transform-style:preserve-3d; transition:transform .7s cubic-bezier(.22,.68,.2,1); }
+.profile-card.is-flipped .profile-card-inner { transform:rotateY(180deg); }
+.profile-card-front,.profile-card-back { position:absolute; inset:0; display:flex; flex-direction:column; border:1px solid #dfb56550; border-radius:var(--profile-radius); overflow:hidden; backface-visibility:hidden; -webkit-backface-visibility:hidden; box-shadow:0 16px 40px #0003; }
+.profile-card-front { background:#24221c; transform:rotateY(0deg); }
+.hero-portrait .profile-card img,.journey-cover .profile-card img { width:100%; height:100%; display:block; object-fit:cover; object-position:50% 0; }
+.profile-card-caption { position:absolute; inset:auto 0 0; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:48px 22px 20px; background:linear-gradient(transparent,#151512e8); font-size:17px; font-weight:500; }
+.profile-card-hint { display:flex; align-items:center; gap:8px; color:#f0cf91; font-size:11px; font-weight:400; }
+.profile-card-back { transform:rotateY(180deg); padding:26px; justify-content:center; background:radial-gradient(circle at 100% 0,#dfb56517,transparent 65%),#23231f; }
+.profile-card-eyebrow { color:#dfb565; font-size:9px; letter-spacing:.16em; margin-bottom:15px; }
+.profile-card-name { color:#f5efdf; font-size:27px; font-weight:600; line-height:1.2; letter-spacing:-.04em; margin-bottom:15px; }
+.profile-card-bio { font-size:12px; line-height:1.8; color:#d0cdc3; }
+.profile-card-facts { display:grid; gap:7px; margin-top:18px; padding-top:16px; border-top:1px solid #ffffff16; color:#e6cc9f; font-size:10px; line-height:1.5; }
+.profile-card-return { display:flex; align-items:center; gap:10px; margin-top:20px; font-size:10px; color:#a9a79e; }
+.career-journey.is-horizontal .journey-cover { gap:26px; }
+.journey-cover .profile-card { width:265px; height:340px; flex-shrink:0; --profile-radius:16px; }
+.journey-cover .profile-card-back { padding:22px; }
+.journey-cover .profile-card-name { font-size:24px; }
+.journey-cover .profile-card-caption { padding-inline:18px; }
+@media(max-width:1100px) and (min-width:651px) {
+ .main-content .home-section { gap:24px; }
+ .home-section .hero-portrait { width:43%; }
+ .home-section .profile-card { height:330px; }
+ .profile-card-back { padding:20px; }
+ .profile-card-name { font-size:23px; }
+ .profile-card-bio { font-size:11px; }
+ .profile-card-facts { font-size:9px; margin-top:12px; padding-top:12px; }
+ .profile-card-caption { padding-inline:16px; font-size:15px; }
+}
+@media(max-width:650px) {
+ .main-content .home-section { padding:38px 20px; min-height:0; gap:32px; align-items:stretch; }
+ .home-section .hero-copy { width:100%; }
+ .home-section .hero-portrait { flex:none; width:100%; max-width:340px; margin-inline:auto; }
+ .profile-card { height:370px; }
+}
+@media(prefers-reduced-motion:reduce) { .profile-card-inner { transition:none; } }

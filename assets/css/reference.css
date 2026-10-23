@@ -1,0 +1,57 @@
+/* Portrait and charcoal/gold composition from the supplied visual reference. */
+:root { --gold: #dfb565; --orange-yellow-crayola: #e6be76; --vegas-gold: #dfb565; }
+body { background: #d3c0a3; padding: 34px; color: #eeeae3; }
+.app-shell { max-width: 1440px; background: #191918; border-color: #55514a; border-radius: 13px; overflow: clip; box-shadow: 0 28px 90px #37291955; }
+.window-bar { height: 38px; background: #2b2c2b; border-color: #373735; border-radius: 12px 12px 0 0; }
+.window-title { color: #b7b6af; font-size: 9px; }
+main.workspace { grid-template-columns: 230px minmax(0,1fr); }
+.sidebar { background: #131413; min-height: 700px; border-color: #ffffff0d; }
+.brand-block { padding: 30px 28px 24px; }
+.brand-monogram { font-size: 76px; margin-bottom: 12px; font-weight: 500; background: linear-gradient(125deg,#f1d79b,#c79847); background-clip: text; }
+.brand-role { letter-spacing: .025em; font-size: 11px; text-transform: none; }
+.side-navigation { padding: 15px 12px; gap: 7px; }
+.side-link { font-size: 14px; min-height: 49px; border-radius: 0 5px 5px 0; }
+.side-link.active { background: linear-gradient(90deg,#d7ae6120,#d7ae6105); color: #eed19a; border-color: #dfb565; }
+.side-link.active ion-icon { color: #dfb565; }
+.main-content { padding-inline: 36px; }
+.main-content .home-section { position: relative; isolation: isolate; overflow: hidden; margin-inline: -36px; padding: 64px 36px; min-height: 430px; display: flex; align-items: center; background: #1c1c19; border-color: #ffffff0b; }
+.hero-copy { position: relative; z-index: 2; width: 55%; max-width: 510px; }
+.hero-greeting { font-size: 27px; letter-spacing: -.035em; color: #dedbd4; }
+#home-title { font-size: clamp(38px,4.1vw,62px); letter-spacing: -.045em; margin: 8px 0 20px; line-height: 1.1; }
+.hero-description { font-size: 17px; color: #cfccc5; line-height: 1.6; max-width: 350px; }
+.hero-actions { margin-top: 28px; }
+.primary-button { background: linear-gradient(135deg,#edcc88,#d5a654); color: #242018; min-height: 46px; padding: 12px 21px; font-size: 13px; box-shadow: none; }
+.home-section .secondary-button { background: #1a191788; border-color: #ffffff18; font-size: 12px; }
+.hero-portrait { position: absolute; z-index: 0; inset: 0; pointer-events: none; }
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+.hero-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#1c1c19 0%,#1c1c19f5 24%,#1c1c19b0 43%,#1c1c1900 65%),linear-gradient(0deg,#19191866,transparent 18%); }
+.main-content > #portfolio { padding-top: 30px; }
+.article-title { font-size: 25px; }
+#portfolio > .section-intro { margin-bottom: 18px; }
+.portfolio .project-list { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.project-item { background: transparent; border: 0; border-radius: 0; }
+.project-preview { padding-bottom: 10px; }
+.portfolio .project-img { aspect-ratio: 1.55; border-radius: 9px; margin-bottom: 15px; }
+.project-title,.project-category { margin-inline: 0; }
+.project-title { font-size: 14px; font-weight: 600; }
+.project-category { color: #a4a39d; font-size: 12px; }
+.project-excerpt,.project-tags { display: none; }
+.filter-list { gap: 6px; margin-bottom: 20px; }
+.filter-item button { border: 0; padding: 6px 10px; min-height: 36px; }
+.filter-item button.active { background: #dfb56512; color: #e6c182; }
+.service-item,.skill-group,.quick-facts,.focus-section,.form-input,.project-dialog { background: #20211f; border-color: #ffffff12; }
+.site-footer { background: #131413; margin-inline: -36px; border-color: #ffffff10; }
+[hidden] { display: none !important; }
+@media(min-width:1500px) { .main-content { padding-inline: 42px; } .main-content .home-section { margin-inline: -42px; padding-inline: 42px; min-height: 460px; } .site-footer { margin-inline: -42px; } }
+@media(max-width:1100px) { body { padding: 20px; } main.workspace { grid-template-columns: 205px minmax(0,1fr); } .main-content { padding-inline: 26px; } .main-content .home-section { margin-inline: -26px; padding-inline: 26px; min-height: 390px; } .hero-copy { width: 57%; } #home-title { font-size: 42px; } .hero-description { font-size: 14px; } .hero-greeting { font-size: 24px; } .home-section .secondary-button { display: none; } .portfolio .project-list { gap: 16px; } .site-footer { margin-inline: -26px; } }
+@media(max-width:900px) { main.workspace { display: block; } .sidebar { min-height: 0; } .brand-block { padding: 18px 24px; } .brand-monogram { font-size: 40px; margin: 0; } .side-navigation { padding: 7px 14px 13px; gap: 3px; } .side-link { min-height: 44px; font-size: 11px; border-radius: 6px; } .main-content .home-section { min-height: 410px; } .hero-copy { width: 52%; } }
+@media(max-width:650px) { body { padding: 0; background: #191918; } .app-shell,.window-bar { border-radius: 0; } .main-content { padding-inline: 20px; } .main-content .home-section { margin-inline: -20px; padding: 38px 20px 0; display: flex; flex-direction: column; align-items: stretch; min-height: 640px; } .hero-copy { width: 100%; max-width: none; } #home-title { font-size: 46px; } .hero-greeting { font-size: 23px; } .hero-description { font-size: 15px; } .hero-actions { margin-top: 20px; } .home-section .secondary-button { display: inline-flex; } .hero-portrait { top: auto; height: 350px; } .hero-portrait img { object-fit: cover; object-position: right center; } .hero-portrait::after { background: linear-gradient(180deg,#1c1c19,transparent 28%),linear-gradient(90deg,#1c1c1955,transparent 65%); } .portfolio .project-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 14px; } .project-title { font-size: 13px; } .project-category { font-size: 10px; } .project-preview { padding-bottom: 4px; } .portfolio .project-img { aspect-ratio: 1.4; } .site-footer { margin-inline: -20px; } .desktop-break { display: none; } }
+@media(max-width:380px) { .portfolio .project-list { grid-template-columns: 1fr; } #home-title { font-size: 40px; } }
+
+/* Let the portfolio fill the browser, without a mock browser frame. */
+html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #191918; }
+.app-shell { width: 100%; max-width: none; margin: 0; min-height: 100dvh; border: 0; border-radius: 0; box-shadow: none; }
+.window-bar { display: none; }
+.sidebar { height: 100dvh; border-radius: 0; }
+.site-footer { border-radius: 0; }
+@media(max-width:900px) { .sidebar { height: auto; } }

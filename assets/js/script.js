@@ -17,7 +17,7 @@ function handleHash() {
   const target = document.getElementById(id);
   setActiveSection(id === 'mini-projects' ? 'portfolio' : id);
   if (hash === 'mini-projects') filterProjects('all');
-  if (target && location.hash) target.scrollIntoView({block: 'start'});
+  if (target && location.hash) target.scrollIntoView({block: 'start', behavior: 'instant'});
 }
 window.addEventListener('hashchange', handleHash);
 const sectionObserver = new IntersectionObserver(entries => {
@@ -25,6 +25,20 @@ const sectionObserver = new IntersectionObserver(entries => {
   if (visible.length) setActiveSection(visible[0].target.id);
 }, {rootMargin: '-10% 0px -65% 0px', threshold: 0});
 sections.forEach(section => sectionObserver.observe(section));
+// Keep the active link accurate while the long résumé timeline is pinned.
+let navigationFrame = 0;
+window.addEventListener('scroll', () => {
+  if (navigationFrame) return;
+  navigationFrame = requestAnimationFrame(() => {
+    navigationFrame = 0;
+    const marker = (document.querySelector('.studio-topbar')?.offsetHeight || 0) + 100;
+    const current = [...sections].find(section => {
+      const bounds = section.getBoundingClientRect();
+      return bounds.top <= marker && bounds.bottom > marker;
+    });
+    if (current) setActiveSection(current.id);
+  });
+}, {passive: true});
 const filterButtons = document.querySelectorAll('[data-filter-btn]');
 const projectSelect = document.querySelector('[data-project-select]');
 function filterProjects(category) {
@@ -74,4 +88,12 @@ projectDialog.addEventListener('click', event => {
     const bounds = projectDialog.getBoundingClientRect();
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) projectDialog.close();
   }
+});
+
+const toolkitToggle = document.querySelector('[data-toolkit-toggle]');
+if (toolkitToggle) toolkitToggle.addEventListener('click', () => {
+  const paused = toolkitToggle.closest('.studio-toolkit').classList.toggle('is-paused');
+  toolkitToggle.setAttribute('aria-pressed', String(paused));
+  toolkitToggle.setAttribute('aria-label', `${paused ? 'Resume' : 'Pause'} toolkit animation`);
+  toolkitToggle.innerHTML = `${paused ? 'Play' : 'Pause'} <span aria-hidden="true">${paused ? '▷' : 'Ⅱ'}</span>`;
 });

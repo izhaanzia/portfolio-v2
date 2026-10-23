@@ -1,0 +1,34 @@
+.identity-card.lanyard-profile{position:sticky;top:0;z-index:20;margin-top:-144px;padding:0 0 16px;background:transparent;color:#f4ece5;overflow:visible;border-radius:0;box-shadow:none}
+.lanyard-profile>.portrait-flip,.lanyard-profile>.identity-mark,.lanyard-profile>.dashed-orbit,.lanyard-profile>p,.lanyard-profile>.border-glow-effects{display:none!important}
+.lanyard-profile>h2{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.lanyard-frame{position:relative;height:clamp(460px,76dvh,620px);width:100%}
+.lanyard-stage{position:relative;width:100%;height:100%;isolation:isolate;outline:none}.lanyard-stage:focus-visible{outline:2px solid #e8a16d;outline-offset:3px}
+.lanyard-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;outline:none;opacity:0;transition:opacity .4s}
+.lanyard-rendered>.lanyard-canvas{opacity:1}
+.lanyard-fallback{position:absolute;left:8%;top:17%;width:84%;height:auto;border-radius:18px;border:1px solid #ba8555;box-shadow:0 20px 30px #0005;transition:opacity .3s}
+.lanyard-stage:before{content:"";position:absolute;top:0;left:46%;width:8%;height:20%;background:repeating-linear-gradient(180deg,#251d18 0 12px,#8f6945 12px 13px,#251d18 13px 30px);border-inline:1px solid #785134}
+.lanyard-rendered>.lanyard-fallback,.lanyard-rendered:before{opacity:0;pointer-events:none}
+.lanyard-profile .identity-socials{gap:12px}.lanyard-profile .identity-socials a{color:#e8a16d;font-size:21px}
+.lanyard-profile .profile-resume-link{color:#e8ae86;border-color:#e8a16d40;margin-top:8px;min-height:40px;font-size:11px}
+.lanyard-profile .profile-resume-link:hover{background:#30231b}
+.lanyard-profile .identity-location{color:#b1a398;margin-top:10px}
+
+@media(max-width:1150px){.identity-card.lanyard-profile{padding:0}.lanyard-frame{height:clamp(440px,76dvh,590px)}}
+@media(max-width:850px){
+ .identity-card.lanyard-profile{position:relative;top:0;width:344px;margin:-144px auto 64px}
+ .lanyard-frame{height:540px}
+ .lanyard-stage.is-docked{position:fixed;top:0;right:0;width:152px;height:330px;z-index:900;background:transparent;border:0;border-radius:0;box-shadow:none;contain:layout size}
+ .lanyard-stage.is-docked .lanyard-fallback{top:32%;border-radius:8px}
+ .lanyard-stage.is-docked:before{height:34%}
+}
+@media(max-width:620px){.identity-card.lanyard-profile{margin-top:-116px}.lanyard-frame{height:520px}}
+@media(max-height:650px) and (min-width:851px){.lanyard-frame{height:440px}}
+@media(prefers-reduced-motion:reduce){.lanyard-fallback,.lanyard-canvas{transition:none}}
+@media print{.lanyard-stage.is-docked{position:relative}}
+
+@media(max-width:850px){
+ .lanyard-stage.is-docked.is-expanded{right:8px;width:min(344px,calc(100vw - 16px));height:min(600px,90dvh)}
+ .lanyard-stage.is-docked.is-expanded .lanyard-fallback{top:21%}
+}
+.intro-pending:not(.intro-reveal-profile) .lanyard-canvas{visibility:hidden}
+

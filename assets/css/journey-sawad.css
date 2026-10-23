@@ -1,0 +1,52 @@
+/* Journey follows the recorded horizontal flow, using the current portfolio palette. */
+.career-journey{--journey-accent:var(--orange);min-width:0;position:relative}
+.journey-stage{background:var(--bg,#151312);padding:16px 0 0}
+.journey-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:28px}
+.journey-heading>p{font-size:14px;color:#e9e5e2;line-height:1.6;margin:0}
+.journey-heading>p>span{display:block;color:var(--muted);font-size:12px}
+.journey-controls{display:flex;gap:10px}.journey-controls[hidden],.journey-foot[hidden]{display:none}
+.journey-controls button{width:44px;height:44px;border:1px solid #654333;border-radius:50%;background:transparent;color:var(--orange);display:grid;place-items:center;font-size:21px;cursor:pointer;transition:background .2s}
+.journey-controls button:hover:not(:disabled){background:#35231b}.journey-controls button:disabled{opacity:.3;cursor:default}
+.journey-track{list-style:none;margin:0;padding:0 0 0 7px;display:grid}
+.journey-cover,.journey-stem{display:none}
+.journey-step{position:relative;min-width:0;border-left:1px solid #594032;padding:0 0 44px 28px}
+.journey-step:last-child{border-left-color:transparent;padding-bottom:0}
+.journey-marker{position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--orange);border-radius:50%;box-shadow:0 0 0 5px #151312}
+.journey-future .journey-marker{background:#151312;border:1px solid var(--orange)}
+.journey-date{margin:0 0 12px;color:var(--orange);font-size:25px;font-weight:500;line-height:1.25;letter-spacing:-.8px}
+.journey-kind{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a7a09b;margin-bottom:8px}
+.journey-copy h3{font-size:20px;font-weight:600;line-height:1.35;letter-spacing:-.5px;margin:0 0 8px;color:#f6f3f0}
+.journey-place{font-size:13px;line-height:1.6;margin:0 0 12px;color:#d0c9c4}
+.journey-description{font-size:14px;line-height:1.7;color:var(--muted);margin:0;max-width:48ch}
+.journey-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #ffffff16;padding-top:20px;color:var(--muted);font-size:12px}
+.journey-foot p{margin:0}.journey-foot>span{color:var(--orange);font-variant-numeric:tabular-nums}
+.career-journey.is-horizontal .journey-stage{height:580px;padding-top:12px}
+.career-journey.is-horizontal .journey-heading{height:60px;padding-bottom:16px}
+.career-journey.is-horizontal .journey-viewport{overflow:hidden}
+.career-journey.is-horizontal .journey-track{display:flex;width:max-content;height:440px;padding:0 70px 0 0}
+.career-journey.is-horizontal .journey-cover{display:flex;flex:0 0 285px;flex-direction:column;align-items:flex-start;justify-content:center;padding-right:35px}
+.journey-cover-number{font-size:12px;color:var(--orange);letter-spacing:2px;margin-bottom:22px}
+.journey-cover strong{font-size:36px;line-height:1.2;letter-spacing:-1.3px;font-weight:600;color:#f6f3f0}
+.journey-cover>span{display:flex;gap:15px;align-items:center;margin-top:28px;color:var(--muted);font-size:12px}
+.career-journey.is-horizontal .journey-step{flex:0 0 365px;width:365px;height:440px;border:0;padding:0 30px 0 0}
+.career-journey.is-horizontal .journey-step::before,.career-journey.is-horizontal .journey-step::after{content:'';position:absolute;left:0;top:50%;width:100%;height:1px;background:#594032}
+.career-journey.is-horizontal .journey-step::after{height:2px;background:var(--orange);transform:scaleX(var(--line-progress,0));transform-origin:left}
+.career-journey.is-horizontal .journey-copy{position:absolute;left:20px;width:310px}
+.career-journey.is-horizontal .journey-step:nth-child(even) .journey-copy{top:12px}
+.career-journey.is-horizontal .journey-step:nth-child(odd) .journey-copy{top:calc(50% + 24px)}
+.career-journey.is-horizontal .journey-stem{display:block;position:absolute;left:0;width:1px;height:190px;background:var(--orange)}
+.career-journey.is-horizontal .journey-step:nth-child(even) .journey-stem{bottom:50%;transform-origin:bottom}
+.career-journey.is-horizontal .journey-step:nth-child(odd) .journey-stem{top:50%;transform-origin:top}
+.career-journey.is-horizontal .journey-step:nth-child(even) .journey-marker{top:25px}
+.career-journey.is-horizontal .journey-step:nth-child(odd) .journey-marker{top:calc(50% + 185px)}
+.career-journey.is-horizontal .journey-date{font-size:23px;margin-bottom:8px}
+.career-journey.is-horizontal .journey-kind{font-size:10px;margin-bottom:6px}
+.career-journey.is-horizontal .journey-copy h3{font-size:17px;margin-bottom:6px}
+.career-journey.is-horizontal .journey-place{font-size:12px;margin-bottom:8px;line-height:1.5}
+.career-journey.is-horizontal .journey-description{font-size:12px;line-height:1.65}
+@media(max-width:480px){.journey-date{font-size:23px}.journey-copy h3{font-size:19px}.journey-description{font-size:13px}.journey-heading{padding-bottom:32px}}
+
+/* Pin the title together with the timeline so it stays visible during travel. */
+.journey-pin.is-pinned-journey{background:var(--bg,#151312)}
+.journey-pin.is-pinned-journey>.section-title{font-size:clamp(48px,6.5vh,64px);line-height:1.03;margin-bottom:20px;letter-spacing:-3px}
+.career-journey.is-horizontal .journey-stage{height:560px}

@@ -1,0 +1,13 @@
+/* React Bits BorderGlow: warm palette, preserving each card's layout. */
+.border-glow-card{--edge-proximity:0;--cursor-angle:45deg;--edge-sensitivity:30;--color-sensitivity:50;--cone-spread:25;--glow-rgb:255 183 116;--bg-mesh:radial-gradient(at 80% 55%,#f36537 0,transparent 55%),radial-gradient(at 20% 15%,#e8a16d 0,transparent 55%),radial-gradient(at 65% 90%,#d5ad60 0,transparent 60%),linear-gradient(#e8a16d,#f36537);isolation:isolate}
+.border-glow-card>.border-glow-effects{position:absolute;inset:0;z-index:4;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .65s ease;overflow:visible}
+.border-glow-card.glow-engaged>.border-glow-effects{opacity:1;transition:opacity .2s ease}
+.border-glow-effects>.bg-border,.border-glow-effects>.bg-fill,.border-glow-effects>.edge-light{position:absolute;inset:0;border-radius:inherit;pointer-events:none}
+.border-glow-effects>.bg-border{mask-image:conic-gradient(from var(--cursor-angle) at center,black 25%,transparent 40%,transparent 60%,black 75%);opacity:clamp(0,calc((var(--edge-proximity) - 50)/50),1)}
+.border-glow-effects>.bg-border::before{content:"";position:absolute;inset:0;padding:1.5px;border-radius:inherit;background:var(--bg-mesh);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.border-glow-effects>.bg-fill{background:var(--bg-mesh);mask-image:radial-gradient(ellipse at center,transparent 45%,black 100%),conic-gradient(from var(--cursor-angle) at center,black 3%,transparent 25%,transparent 75%,black 97%);mask-composite:intersect;opacity:clamp(0,calc(.13*(var(--edge-proximity) - 50)/50),.13);mix-blend-mode:soft-light}
+.border-glow-effects>.edge-light{inset:-20px;mask-image:conic-gradient(from var(--cursor-angle) at center,black 2.5%,transparent 10%,transparent 90%,black 97.5%);opacity:clamp(0,calc((var(--edge-proximity) - 30)/70),1)}
+.border-glow-effects>.edge-light::before{content:"";position:absolute;inset:20px;border-radius:inherit;box-shadow:inset 0 0 0 1px rgb(var(--glow-rgb)/.95),inset 0 0 3px rgb(var(--glow-rgb)/.6),inset 0 0 8px rgb(var(--glow-rgb)/.35),inset 0 0 22px rgb(var(--glow-rgb)/.16),0 0 3px rgb(var(--glow-rgb)/.5),0 0 12px rgb(var(--glow-rgb)/.2),0 0 24px rgb(var(--glow-rgb)/.1)}
+.feature-card.lime.border-glow-card{--glow-rgb:225 255 175}.feature-card.orange.border-glow-card{--glow-rgb:255 236 199}.identity-card.border-glow-card{--glow-rgb:237 140 74}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.border-glow-card>.border-glow-effects{display:none!important}}
+@media print{.border-glow-card>.border-glow-effects{display:none!important}}

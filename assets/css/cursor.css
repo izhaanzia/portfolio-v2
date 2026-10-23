@@ -1,0 +1,9 @@
+/* A quiet pointer follower; the native cursor stays available. */
+.cursor-aura{position:fixed;left:0;top:0;width:36px;height:36px;margin:-18px 0 0 -18px;pointer-events:none;z-index:9999;opacity:0;transition:opacity .2s;contain:layout style;}
+.cursor-aura.is-visible{opacity:1;will-change:transform}
+.cursor-aura::before{content:"";position:absolute;inset:-28px;background:radial-gradient(ellipse,#e8a16d16 0%,#e8a16d08 25%,transparent 68%);transition:transform .3s ease,opacity .3s ease;}
+.cursor-aura.is-interactive::before{transform:scale(1.12);opacity:.7;}
+.cursor-aura.is-pressed::before{transform:scale(.8);opacity:.5;}
+html.intro-pending .cursor-aura,body:has(dialog[open]) .cursor-aura{opacity:0;}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-aura{display:none!important}}
+@media print{.cursor-aura{display:none!important}}
